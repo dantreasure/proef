@@ -1,0 +1,27 @@
+body{
+	-webkit-transition: background-color 1000ms linear;
+  -moz-transition: background-color 1000ms linear;
+  -o-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
+}
+
+body.background-1{
+	background-color: #D7E2DC;
+}
+
+body.background-2{
+	background-color: #EEE7E8;
+}
+
+body.background-3{
+	background-color: #E4E7E3;
+}
+
+body.background-4{
+	background-color: #E9E5DF;
+}
+
+body.background-5{
+	background-color: #ECE2EA;
+}

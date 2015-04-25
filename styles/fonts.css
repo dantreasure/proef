@@ -1,0 +1,22 @@
+.grotesk-light{
+    font-family: "Grotesk-Light", Fallback, sans-serif;
+}
+
+.grotesk-light-italic{
+    font-family: "Grotesk-Light-Italic", Fallback, sans-serif;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Grotesk-Light";
+    font-style: normal;
+    src: url("../fonts/FoundersGroteskTextWeb-Light.woff") format('woff');
+    src: url("../fonts/FoundersGroteskTextWeb-Light.eot") format('eot');
+}
+
+@font-face {
+    font-family: "Grotesk-Light-Italic";
+    font-style: normal;
+    src: url("../fonts/FoundersGroteskTextWeb-LightItalic.woff") format('woff');
+    src: url("../fonts/FoundersGroteskTextWeb-LightItalic.eot") format('eot');
+}
