@@ -1,4 +1,6 @@
 body{
+	height: 100%;
+	width: 100%;
 	-webkit-transition: background-color 1000ms linear;
   -moz-transition: background-color 1000ms linear;
   -o-transition: background-color 1000ms linear;
@@ -24,4 +26,33 @@ body.background-4{
 
 body.background-5{
 	background-color: #ECE2EA;
+}
+
+.main-view{
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	float: right;
+}
+
+nav{
+  height:45px;
+  position:fixed;
+  -webkit-transform-origin: left top;
+  -webkit-transform:rotate(-90deg) translateX(-100%);
+}
+ul.nav {
+	list-style-type: none;
+  margin:0 auto;
+  height:100%;
+}
+
+ul.nav li {
+  margin-right:20px;
+  float:right;
+  height:100%;
+  line-height:45px;
+}
+ul.nav li a {
+
 }
