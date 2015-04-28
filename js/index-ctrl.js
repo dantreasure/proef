@@ -1,4 +1,4 @@
-proef.controller('indexCtrl', ['$scope', function($scope) {
+proef.controller('indexCtrl', ['$scope', function($scope, $document) {
 
   $scope.currentBackground = 1;
 
