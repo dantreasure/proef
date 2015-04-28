@@ -9,35 +9,22 @@ proef.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', {
       url: "/",
-      templateUrl: "../views/home.html"
+      templateUrl: "../views/home.html",
+      controller: "homeCtrl"
     })
     .state('approach', {
       url: "/approach",
-      templateUrl: "../views/approach.html"
+      templateUrl: "../views/approach.html",
+      controller: "approachCtrl"
     })
     .state('about', {
       url: "/about",
-      templateUrl: "../views/about.html"
+      templateUrl: "../views/about.html",
+      controller: "aboutCtrl"
     })
     .state('contact', {
       url: "/contact",
-      templateUrl: "../views/contact.html"
+      templateUrl: "../views/contact.html",
+      controller: "contactCtrl"
     })
 });
-
-proef.controller('mainCtrl', ['$scope', function($scope) {
-  $scope.currentBackground = 1;
-
-  $scope.previousQuote = function(){
-  	if ($scope.currentBackground !== 1){
-  		$scope.currentBackground--;
-  	}
-  };
-
-  $scope.nextQuote = function(){
-  	if ($scope.currentBackground !== 5){
-  		$scope.currentBackground++;
-  	}
-  };
-
-}]);
