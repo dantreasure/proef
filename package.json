@@ -2,10 +2,16 @@
   "name": "proef",
   "version": "0.2.0",
   "description": "",
-  "main": "app/index.js",
+  "engine": {
+    "node":"0.10.26"
+  },
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/dantreasure/proef.git"
+  },
+  "scripts":{
+    "start": "node index.js"
   },
   "author": "dantreasure",
   "license": "ISC",
