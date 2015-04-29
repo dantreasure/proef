@@ -10,22 +10,22 @@ proef.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', {
       url: "/",
-      templateUrl: "../views/home.html",
+      templateUrl: "../partials/home.html",
       controller: "homeCtrl"
     })
     .state('approach', {
       url: "/approach",
-      templateUrl: "../views/approach.html",
+      templateUrl: "../partials/approach.html",
       controller: "approachCtrl"
     })
     .state('about', {
       url: "/about",
-      templateUrl: "../views/about.html",
+      templateUrl: "../partials/about.html",
       controller: "aboutCtrl"
     })
     .state('contact', {
       url: "/contact",
-      templateUrl: "../views/contact.html",
+      templateUrl: "../partials/contact.html",
       controller: "contactCtrl"
     })
 });
