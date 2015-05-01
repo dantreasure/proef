@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="proef">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.14/angular-ui-router.min.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+
+  <body ng-controller="indexCtrl" ng-class="[ 'background-' + currentBackground, 'mouse-' + mouseDirection ]" ng-mousemove="updateMouse($event)">
+		<div ui-view class="main-view"></div>
+    <h1 ng-bind="message"></h1>
+    <nav>
+      <ul class="nav">
+        <li><a ui-sref="approach">Approach</a></li>
+        <li><a ui-sref="about">About</a></li>
+        <li><a ui-sref="contact">Contact</a></li>
+      </ul>
+    <nav>
+  </body>
+</html>
