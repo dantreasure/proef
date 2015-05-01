@@ -9,7 +9,7 @@ proef.controller('indexCtrl', ['$scope', function($scope) {
     } else{
       $scope.mouseDirection = 'right'
     }
-  }
+  };
 
   $scope.currentBackground = 1;
 
