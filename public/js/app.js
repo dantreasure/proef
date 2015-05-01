@@ -1,5 +1,4 @@
 var proef = angular.module('proef', ['ui.router']);
-var mouseEvt;
 
 proef.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise("/");
