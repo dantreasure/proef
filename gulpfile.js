@@ -1,3 +1,5 @@
+//TODO: Figure out how to selectively push dist to heroku
+
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
