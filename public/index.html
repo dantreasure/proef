@@ -9,9 +9,8 @@
     <script src="js/main.js"></script>
   </head>
 
-  <body ng-controller="indexCtrl" ng-class="[ 'background-' + currentBackground, 'mouse-' + mouseDirection ]" ng-mousemove="updateMouse($event)">
+  <body ng-controller="indexCtrl" ng-class="[ 'background-' + currentBackground(), 'mouse-' + mouseDirection ]" ng-mousemove="updateMouse($event)">
 		<div ui-view class="main-view"></div>
-    <h1 ng-bind="message"></h1>
     <nav>
       <ul class="nav">
         <li><a ui-sref="approach">Approach</a></li>

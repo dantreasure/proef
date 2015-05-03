@@ -36,30 +36,61 @@ proef.controller('approachCtrl', ['$scope', function($scope) {
 	$scope.message = 'this is the approach page';
 }]);
 
+proef.factory('background', function(){
+	var factory = {};
+
+	var backgroundId = 1;
+
+	factory.getBackground = function(){
+		return backgroundId;
+	}
+
+	factory.decrementBackground = function(){
+		if (backgroundId !== 1){
+  		backgroundId--;
+  	}
+	}
+
+	factory.incrementBackground = function(){
+		if (backgroundId !== 5){
+  		backgroundId++;
+  	}
+	}
+
+	return factory
+});
+
 proef.controller('contactCtrl', ['$scope', function($scope) {
   $scope.message = 'this is the contact page';
 }]);
 
-proef.controller('homeCtrl', ['$scope', function($scope) {
-  $scope.message = 'this is the homiest page';
+proef.controller('homeCtrl', ['$scope', 'background', function($scope, background) {
+  $scope.messages = [
+    '-(n) dutch: to try out, test, experiment',
+    'Each answer is measured, each project is its own',
+    'this is the third quote',
+    'this is the fourth quote',
+    'this is the fifth quote'
+  ]
+  $scope.message = 0;
 
-  // $scope.currentBackground = 1;
+  $scope.previousQuote = function(){
+    if ($scope.message !== 0){
+      $scope.message--;
+    }
+    background.decrementBackground();
+  };
 
-  // $scope.previousQuote = function(){
-  // 	if ($scope.currentBackground !== 1){
-  // 		$scope.currentBackground--;
-  // 	}
-  // };
-
-  // $scope.nextQuote = function(){
-  // 	if ($scope.currentBackground !== 5){
-  // 		$scope.currentBackground++;
-  // 	}
-  // };
+  $scope.nextQuote = function(){
+    if ($scope.message !== 4){
+      $scope.message++;
+    }
+    background.incrementBackground();
+  };
 
 }]);
 
-proef.controller('indexCtrl', ['$scope', function($scope) {
+proef.controller('indexCtrl', ['$scope', 'background', function($scope, background) {
   $scope.mouseDirection = 'left';
 
   $scope.updateMouse = function(evt){
@@ -72,19 +103,9 @@ proef.controller('indexCtrl', ['$scope', function($scope) {
     }
   };
 
-  $scope.currentBackground = 1;
-
-  $scope.previousQuote = function(){
-  	if ($scope.currentBackground !== 1){
-  		$scope.currentBackground--;
-  	}
-  };
-
-  $scope.nextQuote = function(){
-  	if ($scope.currentBackground !== 5){
-  		$scope.currentBackground++;
-  	}
-  };
+  $scope.currentBackground = function(){
+    return background.getBackground();
+  }
 
 }]);
 

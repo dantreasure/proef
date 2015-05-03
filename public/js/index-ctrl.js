@@ -1,4 +1,4 @@
-proef.controller('indexCtrl', ['$scope', function($scope) {
+proef.controller('indexCtrl', ['$scope', 'background', function($scope, background) {
   $scope.mouseDirection = 'left';
 
   $scope.updateMouse = function(evt){
@@ -11,19 +11,9 @@ proef.controller('indexCtrl', ['$scope', function($scope) {
     }
   };
 
-  $scope.currentBackground = 1;
-
-  $scope.previousQuote = function(){
-  	if ($scope.currentBackground !== 1){
-  		$scope.currentBackground--;
-  	}
-  };
-
-  $scope.nextQuote = function(){
-  	if ($scope.currentBackground !== 5){
-  		$scope.currentBackground++;
-  	}
-  };
+  $scope.currentBackground = function(){
+    return background.getBackground();
+  }
 
 }]);
 
