@@ -43,14 +43,12 @@ gulp.task('styles', function() {
 
 gulp.task('scripts', function() {
   return gulp.src(['public/js/app.js', 'public/js/**/*.js'])
-    .pipe(sourcemaps.init())
-        .pipe(plumber())
-        .pipe(concat('main.js', {process: function(src) { return (src.trim() + '\n').replace(/(^|\n)[ \t]*('use strict'|"use strict");?\s*/g, '$1'); }}))
-        .pipe(concat.header('(function(window, document, undefined) {\n\'use strict\';\n'))
-        .pipe(concat.footer('\n})(window, document);\n'))
-        .pipe(ngAnnotate())
-        // .pipe(uglify())
-    .pipe(sourcemaps.write())
+    .pipe(plumber())
+    .pipe(concat('main.js', {process: function(src) { return (src.trim() + '\n').replace(/(^|\n)[ \t]*('use strict'|"use strict");?\s*/g, '$1'); }}))
+    .pipe(concat.header('(function(window, document, undefined) {\n\'use strict\';\n'))
+    .pipe(concat.footer('\n})(window, document);\n'))
+    .pipe(ngAnnotate())
+    // .pipe(uglify())
     .pipe(gulp.dest('dist/js'))
     .pipe(livereload())
     .pipe(notify({ message: 'Scripts task complete' }));
