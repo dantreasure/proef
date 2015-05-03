@@ -1,5 +1,5 @@
 proef.controller('homeCtrl', ['$scope', function($scope) {
-  $scope.message = 'this is the home page';
+  $scope.message = 'this is the homiest page';
 
   // $scope.currentBackground = 1;
 
