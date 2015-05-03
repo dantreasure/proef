@@ -14,12 +14,14 @@ var gulp = require('gulp'),
     ngAnnotate = require('gulp-ng-annotate'),
     sourcemaps = require('gulp-sourcemaps'),
     livereload = require('gulp-livereload'),
-    cssfont64 = require('gulp-cssfont64')
+    cssfont64 = require('gulp-cssfont64'),
+    livereload = require('gulp-livereload'),
     del = require('del');
 
 gulp.task('html', function(){
     gulp.src(['public/partials/**/*']).pipe(gulp.dest('dist/partials'))
     gulp.src('public/index.html').pipe(gulp.dest('dist/'))
+    gulp.src(['public/partials/*.html']).pipe(livereload());
 });
 
 gulp.task('styles', function() {
@@ -35,6 +37,7 @@ gulp.task('styles', function() {
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
     .pipe(gulp.dest('dist/css'))
+    .pipe(livereload())
     .pipe(notify({ message: 'Styles task complete' }));
 });
 
@@ -49,6 +52,7 @@ gulp.task('scripts', function() {
         // .pipe(uglify())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist/js'))
+    .pipe(livereload())
     .pipe(notify({ message: 'Scripts task complete' }));
 });
 
@@ -56,6 +60,7 @@ gulp.task('images', function() {
   return gulp.src('public/images/**/*')
     .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
     .pipe(gulp.dest('dist/img'))
+    .pipe(livereload())
     .pipe(notify({ message: 'Images task complete' }));
 });
 
@@ -65,4 +70,18 @@ gulp.task('clean', function(cb) {
 
 gulp.task('default', ['clean'], function() {
     gulp.start('html', 'styles', 'scripts', 'images');
+});
+
+gulp.task('watch', function() {
+
+    gulp.watch('public/**/*.html', ['html']);
+
+    gulp.watch('public/styles/**/*.sass', ['styles']);
+
+    gulp.watch('public/js/**/*.js', ['scripts']);
+
+    gulp.watch('src/images/**/*', ['images']);
+
+    livereload.listen();
+
 });
