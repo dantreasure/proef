@@ -2,7 +2,7 @@
 'use strict';
 var proef = angular.module('proef', ['ui.router']);
 
-proef.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
+proef.config(["$stateProvider", "$urlRouterProvider", "$locationProvider", function($stateProvider, $urlRouterProvider, $locationProvider) {
   $urlRouterProvider.otherwise("/");
 
   $stateProvider
@@ -26,6 +26,8 @@ proef.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $
       templateUrl: "../partials/contact.html",
       controller: "contactCtrl"
     })
+
+    $locationProvider.html5Mode({enabled: true, requireBase: false})
 }]);
 
 proef.controller('aboutCtrl', ['$scope', function($scope) {
@@ -90,8 +92,14 @@ proef.controller('homeCtrl', ['$scope', 'background', function($scope, backgroun
 
 }]);
 
-proef.controller('indexCtrl', ['$scope', 'background', function($scope, background) {
+proef.controller('indexCtrl', ['$scope', 'background', '$location', function($scope, background, $state) {
   $scope.mouseDirection = 'left';
+
+  $scope.state = $state;
+
+  console.log($scope.state.current)
+
+  $scope.activeNav = 'home'
 
   $scope.updateMouse = function(evt){
     var x = evt.x;
