@@ -1,6 +1,6 @@
 var proef = angular.module('proef', ['ui.router']);
 
-proef.config(function($stateProvider, $urlRouterProvider) {
+proef.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
   $urlRouterProvider.otherwise("/");
 
   $stateProvider
@@ -24,6 +24,8 @@ proef.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: "../partials/contact.html",
       controller: "contactCtrl"
     })
+
+    $locationProvider.html5Mode({enabled: true, requireBase: false})
 });
 
 

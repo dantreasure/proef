@@ -10,6 +10,9 @@ body
 	transition: background-color 1000ms linear
 	font-family: "Grotesk-Light", arial, sans-serif
 
+#super-row
+	max-width: 100%
+
 .grotesk-light
   font-family: "Grotesk-Light", arial, sans-serif
 
@@ -42,22 +45,47 @@ body.background-5
 .main-view
 	text-align: center
 	height: 100%
-	width: 100%
 	float: right
 
-nav
-	height:45px
-	position:fixed
+nav .nav
+	width: 463px
 	-webkit-transform-origin: left top
 	-webkit-transform:rotate(-90deg) translateX(-100%)
-
-ul.nav
 	list-style-type: none
-  margin:0 auto
-  height:100%
+	margin-left: 0px
 
-ul.nav li
-	margin-right:20px
-	float:right
-	height:100%
-	line-height:45px
+	li
+		display: inline-block
+
+		&:nth-child(1), &:nth-child(2)
+			margin-right: 90px
+
+		div
+			cursor: pointer
+			padding: 18px 18px
+			margin: 0 auto
+			text-align: center
+
+			&:hover, &.active
+				padding: 17px 17px
+				border: 1px solid black
+
+			a, p
+				color: black
+				font-size: 1rem
+				line-height: 1rem
+				margin-bottom: 0
+
+
+
+
+// ul.nav
+// 	list-style-type: none
+//   margin:0 auto
+//   height:100%
+
+// ul.nav li
+// 	margin-right:20px
+// 	float:right
+// 	height:100%
+// 	line-height:45px

@@ -1,5 +1,11 @@
-proef.controller('indexCtrl', ['$scope', 'background', function($scope, background) {
+proef.controller('indexCtrl', ['$scope', 'background', '$location', function($scope, background, $state) {
   $scope.mouseDirection = 'left';
+
+  $scope.state = $state;
+
+  console.log($scope.state.current)
+
+  $scope.activeNav = 'home'
 
   $scope.updateMouse = function(evt){
     var x = evt.x;

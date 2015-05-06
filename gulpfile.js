@@ -19,13 +19,13 @@ var gulp = require('gulp'),
     del = require('del');
 
 gulp.task('html', function(){
-    gulp.src(['public/partials/**/*']).pipe(gulp.dest('dist/partials'))
-    gulp.src('public/index.html').pipe(gulp.dest('dist/'))
-    gulp.src(['public/partials/*.html']).pipe(livereload());
+    gulp.src(['src/partials/**/*']).pipe(gulp.dest('dist/partials'))
+    gulp.src('src/index.html').pipe(gulp.dest('dist/'))
+    gulp.src(['src/partials/*.html']).pipe(livereload());
 });
 
 gulp.task('styles', function() {
-  return gulp.src('public/styles/**/*.sass')
+  return gulp.src('src/styles/**/*.sass')
     .pipe(sass({
         style: 'expanded',
         errLogToConsole: true,
@@ -42,7 +42,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src(['public/js/app.js', 'public/js/**/*.js'])
+  return gulp.src(['src/js/app.js', 'src/js/**/*.js'])
     .pipe(plumber())
     .pipe(concat('main.js', {process: function(src) { return (src.trim() + '\n').replace(/(^|\n)[ \t]*('use strict'|"use strict");?\s*/g, '$1'); }}))
     .pipe(concat.header('(function(window, document, undefined) {\n\'use strict\';\n'))
@@ -55,7 +55,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('images', function() {
-  return gulp.src('public/images/**/*')
+  return gulp.src('src/images/**/*')
     .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
     .pipe(gulp.dest('dist/img'))
     .pipe(livereload())
@@ -72,11 +72,11 @@ gulp.task('default', ['clean'], function() {
 
 gulp.task('watch', function() {
 
-    gulp.watch('public/**/*.html', ['html']);
+    gulp.watch('src/**/*.html', ['html']);
 
-    gulp.watch('public/styles/**/*.sass', ['styles']);
+    gulp.watch('src/styles/**/*.sass', ['styles']);
 
-    gulp.watch('public/js/**/*.js', ['scripts']);
+    gulp.watch('src/js/**/*.js', ['scripts']);
 
     gulp.watch('src/images/**/*', ['images']);
 
