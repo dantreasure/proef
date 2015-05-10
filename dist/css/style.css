@@ -40,9 +40,9 @@ body {
   transition: background-color 1000ms linear;
   font-family: "Everson-mono", arial, sans-serif; }
   body.mouse-left {
-    cursor: crosshair; }
+    cursor: url(../img/cursor-l.png) 0 30, auto; }
   body.mouse-right {
-    cursor: progress; }
+    cursor: url(../img/cursor-r.png) 91 30, auto; }
   body.background-1 {
     background-color: #D7E2DC; }
   body.background-2 {
@@ -69,7 +69,6 @@ nav {
     nav li:nth-child(1), nav li:nth-child(2) {
       margin-right: 90px; }
     nav li div {
-      cursor: pointer;
       padding: 18px 18px;
       margin: 0 auto;
       text-align: center; }
@@ -78,11 +77,13 @@ nav {
         padding: 17px 17px;
         border: 1px solid black; }
       nav li div a, nav li div p {
+        cursor: inherit;
         color: black;
         font-size: 18px;
         line-height: 18px;
         margin-bottom: 0; }
         nav li div a:hover, nav li div p:hover {
+          cursor: inherit;
           color: black; }
 
 ul.nav {
