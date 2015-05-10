@@ -11,10 +11,11 @@ body
 	font-family: "Everson-mono", arial, sans-serif
 
 	&.mouse-left
-		cursor:crosshair
+		cursor: url(../img/cursor-l.png)0 30, auto
 
 	&.mouse-right
-		cursor: progress
+		cursor: url(../img/cursor-r.png) 91 30, auto
+
 
 	&.background-1
 		background-color: #D7E2DC
@@ -36,8 +37,8 @@ body
 	text-align: center
 	height: 100%
 
-nav .nav
-	width: 514px
+nav
+	width: 531px
 	-webkit-transform-origin: left top
 	-webkit-transform:rotate(-90deg) translateX(-100%)
 	list-style-type: none
@@ -50,20 +51,25 @@ nav .nav
 			margin-right: 90px
 
 		div
-			cursor: pointer
 			padding: 18px 18px
 			margin: 0 auto
 			text-align: center
 
 			&:hover, &.active
+				color: black
 				padding: 17px 17px
 				border: 1px solid black
 
 			a, p
+				cursor: inherit
 				color: black
 				font-size: 18px
 				line-height: 18px
 				margin-bottom: 0
+
+				&:hover
+					cursor: inherit
+					color: black
 
 ul.nav
 	font-family: "Everson-mono", arial, sans-serif
