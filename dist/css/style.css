@@ -3,7 +3,17 @@
   src: url("../fonts/everson-mono.woff"); }
 
 
-.nav-home footer p {
+.nav-home h2 {
+  position: relative;
+  left: -4.16667%;
+  font-size: 123px;
+  text-align: center;
+  width: 100%;
+  padding: 15% 0%; }
+
+.nav-foot footer p {
+  position: relative;
+  vertical-align: bottom;
   font-size: 18px; }
 
 body {
@@ -12,7 +22,7 @@ body {
   margin: 0 0;
   -webkit-transition: background-color 1000ms linear;
   transition: background-color 1000ms linear;
-  font-family: "Everson-mono", arial, sans-serif; }
+  font-family: "Grotesk-Light", arial, sans-serif; }
 
 #super-row {
   max-width: 100%; }
@@ -51,7 +61,7 @@ body.background-5 {
   float: right; }
 
 nav .nav {
-  width: 514px;
+  width: 463px;
   -webkit-transform-origin: left top;
   -webkit-transform: rotate(-90deg) translateX(-100%);
   list-style-type: none;
@@ -70,10 +80,6 @@ nav .nav {
         border: 1px solid black; }
       nav .nav li div a, nav .nav li div p {
         color: black;
-        font-size: 18px;
-        line-height: 18px;
+        font-size: 1rem;
+        line-height: 1rem;
         margin-bottom: 0; }
-
-ul.nav {
-  font-family: "Everson-mono", arial, sans-serif; }
-
