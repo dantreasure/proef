@@ -3,8 +3,21 @@
   src: url("../fonts/everson-mono.woff"); }
 
 
-.nav-home footer p {
-  font-size: 18px; }
+.nav-home footer {
+  margin: 0 auto;
+  width: 110px; }
+  .nav-home footer * {
+    display: inline; }
+  .nav-home footer p {
+    font-size: 18px; }
+  .nav-home footer img {
+    width: 19px;
+    height: 7px;
+    margin-bottom: 5px;
+    visibility: hidden;
+    cursor: pointer; }
+    .nav-home footer img.active {
+      visibility: visible; }
 
 body {
   height: 100vh;
