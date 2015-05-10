@@ -11,30 +11,28 @@
   </head>
 
   <body ng-controller="indexCtrl" ng-class="[ 'background-' + currentBackground(), 'mouse-' + mouseDirection ]" ng-mousemove="updateMouse($event)">
-		<div id="super-row" class="row">
-      <nav class="small-1 medium-1 large-1 columns">
-        <ul class="nav">
-          <li>
-            <div ui-sref="contact" ui-sref-active="active">
-              <p>1</p>
-              <a>Contact</a>
-            </div>
-          </li>
-          <li>
-            <div ui-sref="about" ui-sref-active="active">
-              <p>2</p>
-              <a>About</a>
-            </div>
-          </li>
-          <li>
-            <div ui-sref="approach" ui-sref-active="active">
-              <p>3</p>
-              <a>Approach</a>
-            </div>
-          </li>
-        </ul>
-      </nav>
-      <div ui-view class="main-view small-11 medium-11 large-11 columns"></div>
-    </div>
+    <nav>
+      <ul class="nav">
+        <li>
+          <div ui-sref="contact" ui-sref-active="active">
+            <p>1</p>
+            <a>Contact</a>
+          </div>
+        </li>
+        <li>
+          <div ui-sref="about" ui-sref-active="active">
+            <p>2</p>
+            <a>About</a>
+          </div>
+        </li>
+        <li>
+          <div ui-sref="approach" ui-sref-active="active">
+            <p>3</p>
+            <a>Approach</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div ui-view class="main-view"></div>
   </body>
 </html>
