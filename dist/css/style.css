@@ -1,3 +1,12 @@
+.nav-about {
+  padding-left: 79px; }
+
+.nav-approach {
+  padding-left: 79px; }
+
+.nav-contact {
+  padding-left: 79px; }
+
 @font-face {
   font-family: "Everson-mono";
   src: url("../fonts/everson-mono.woff"); }
@@ -49,29 +58,32 @@ body {
   text-align: center;
   height: 100%; }
 
-nav .nav {
-  width: 514px;
+nav {
+  width: 531px;
   -webkit-transform-origin: left top;
   -webkit-transform: rotate(-90deg) translateX(-100%);
   list-style-type: none;
   margin-left: 0px; }
-  nav .nav li {
+  nav li {
     display: inline-block; }
-    nav .nav li:nth-child(1), nav .nav li:nth-child(2) {
+    nav li:nth-child(1), nav li:nth-child(2) {
       margin-right: 90px; }
-    nav .nav li div {
+    nav li div {
       cursor: pointer;
       padding: 18px 18px;
       margin: 0 auto;
       text-align: center; }
-      nav .nav li div:hover, nav .nav li div.active {
+      nav li div:hover, nav li div.active {
+        color: black;
         padding: 17px 17px;
         border: 1px solid black; }
-      nav .nav li div a, nav .nav li div p {
+      nav li div a, nav li div p {
         color: black;
         font-size: 18px;
         line-height: 18px;
         margin-bottom: 0; }
+        nav li div a:hover, nav li div p:hover {
+          color: black; }
 
 ul.nav {
   font-family: "Everson-mono", arial, sans-serif; }
