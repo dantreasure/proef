@@ -66,9 +66,9 @@ proef.controller('contactCtrl', ['$scope', function($scope) {
   $scope.message = 'this is the contact page';
 }]);
 
-proef.controller('homeCtrl', ['$scope', 'background', function($scope, background) {
+proef.controller('homeCtrl', ['$scope', 'background','$timeout', function($scope, background, $timeout) {
   $scope.messages = [
-    '-(n) dutch: to try out, test, experiment',
+    '-(n) dutch: to try out, test, experiment.',
     'Each answer is measured, each project is its own',
     'this is the third quote',
     'this is the fourth quote',
@@ -90,10 +90,35 @@ proef.controller('homeCtrl', ['$scope', 'background', function($scope, backgroun
     background.incrementBackground();
   };
 
+  var sweep = function(){
+    var italicize = 'dutch';
+
+    var rgx = new RegExp('\\b('+italicize+')\\b', 'ig');
+
+    jQuery('.quote').contents().filter(function() {
+        return this.nodeType === 3;
+    }).each(function() {
+        jQuery(this).replaceWith(jQuery(this).text().replace(rgx, '<span class="emphasize">$1</span>'));
+    });
+  };
+
+  $timeout(sweep, 500);
+
+
 }]);
 
 proef.controller('indexCtrl', ['$scope', 'background', '$location', function($scope, background) {
   $scope.mouseDirection = 'left';
+  $scope.toRotate = false;
+
+  $scope.rotate = function () {
+    if($scope.toRotate === false){
+      $scope.toRotate = true;
+    } else{
+      $scope.toRotate = false;
+    }
+
+  }
 
   $scope.updateMouse = function(evt){
     var x = evt.x;
