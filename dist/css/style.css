@@ -84,16 +84,17 @@ body {
 .nav {
   position: fixed;
   margin-left: 0px;
-  width: 531px;
+  width: 559px;
   -webkit-transform-origin: right top;
       -ms-transform-origin: right top;
           transform-origin: right top;
   list-style-type: none;
-  -webkit-transform: rotate(-90deg) translateX(50%) translateY(-516px);
-      -ms-transform: rotate(-90deg) translateX(50%) translateY(-516px);
-          transform: rotate(-90deg) translateX(50%) translateY(-516px);
+  -webkit-transform: rotate(-90deg) translateX(50%) translateY(-549px);
+      -ms-transform: rotate(-90deg) translateX(50%) translateY(-549px);
+          transform: rotate(-90deg) translateX(50%) translateY(-549px);
   top: 50%; }
   .nav li {
+    width: 120px;
     display: inline-block; }
     .nav li:nth-child(1), .nav li:nth-child(2) {
       margin-right: 90px; }

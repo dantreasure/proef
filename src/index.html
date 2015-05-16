@@ -12,7 +12,7 @@
   </head>
 
   <body ng-controller="indexCtrl" ng-class="[ 'background-' + currentBackground(), 'mouse-' + mouseDirection ]" ng-mousemove="updateMouse($event)">
-    <ul class="nav" ng-class="{ 'rotate': toRotate }">
+    <ul class="nav">
       <li>
         <div ui-sref="contact" ui-sref-active="active">
           <p>1</p>
