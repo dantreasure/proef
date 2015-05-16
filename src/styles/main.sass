@@ -1,17 +1,11 @@
-
 body
 	background-image: url("../img/proef-logo.png")
 	background-repeat: no-repeat
 	background-position: 50% 52px
-	height: 100vh
-	width: 100vw
 	margin: 0 0
-	-webkit-transition: background-color 1000ms linear
-	-moz-transition: background-color 1000ms linear
-	-o-transition: background-color 1000ms linear
-	-ms-transition: background-color 1000ms linear
 	transition: background-color 1000ms linear
 	font-family: "Everson-mono", arial, sans-serif
+	transform-style: preserve-3d
 
 	&.mouse-left
 		cursor: url(../img/cursor-l.png)0 30, auto
@@ -19,9 +13,8 @@ body
 	&.mouse-right
 		cursor: url(../img/cursor-r.png) 91 30, auto
 
-
 	&.background-1
-		background-color: #D7E2DC
+		background-color: #F5F2F2
 
 	&.background-2
 		background-color: #EEE7E8
@@ -37,15 +30,15 @@ body
 
 
 .main-view
-	text-align: center
-	height: 100%
 
-nav
-	width: 531px
-	-webkit-transform-origin: left top
-	-webkit-transform:rotate(-90deg) translateX(-100%)
-	list-style-type: none
+.nav
+	position: fixed
 	margin-left: 0px
+	width: 531px
+	transform-origin: right top
+	list-style-type: none
+	transform:rotate(-90deg) translateX(50%) translateY(-516px)
+	top:50%
 
 	li
 		display: inline-block
