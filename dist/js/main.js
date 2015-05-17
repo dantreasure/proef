@@ -8,9 +8,35 @@ proef.config(["$stateProvider", "$urlRouterProvider", "$locationProvider", funct
   $stateProvider
     .state('home', {
       url: "/",
+      abstract: true,
       templateUrl: "../partials/home.html",
       controller: "homeCtrl"
     })
+      .state('home.1',{
+        url: '',
+        controller: "homeCtrl",
+        templateUrl: "../partials/home/1.html"
+      })
+      .state('home.2',{
+        url: '',
+        controller: "homeCtrl",
+        templateUrl: "../partials/home/2.html"
+      })
+      .state('home.3',{
+        url: '',
+        controller: "homeCtrl",
+        templateUrl: "../partials/home/3.html"
+      })
+      .state('home.4',{
+        url: '',
+        controller: "homeCtrl",
+        templateUrl: "../partials/home/4.html"
+      })
+      .state('home.5',{
+        url: '',
+        controller: "homeCtrl",
+        templateUrl: "../partials/home/5.html"
+      })
     .state('approach', {
       url: "/approach",
       templateUrl: "../partials/approach.html",
@@ -28,6 +54,10 @@ proef.config(["$stateProvider", "$urlRouterProvider", "$locationProvider", funct
     })
 
     $locationProvider.html5Mode({enabled: true, requireBase: false})
+}]);
+
+proef.run(["$rootScope", "$state", function($rootScope, $state){
+  $rootScope.$state = $state;
 }]);
 
 proef.controller('aboutCtrl', ['$scope', function($scope) {
@@ -66,44 +96,22 @@ proef.controller('contactCtrl', ['$scope', function($scope) {
   $scope.message = 'this is the contact page';
 }]);
 
-proef.controller('homeCtrl', ['$scope', 'background','$timeout', function($scope, background, $timeout) {
-  $scope.messages = [
-    '-(n) dutch: to try out, test, experiment.',
-    'Each answer is measured, each project is its own',
-    'this is the third quote',
-    'this is the fourth quote',
-    'this is the fifth quote'
-  ]
-  $scope.message = 0;
+proef.controller('homeCtrl', ['$scope','$state', function($scope, $state) {
+  $scope.quote = 1;
 
   $scope.previousQuote = function(){
-    if ($scope.message !== 0){
-      $scope.message--;
+    if ($scope.quote !== 1){
+      $scope.quote--;
     }
-    background.decrementBackground();
+    $state.go('home.'+$scope.quote)
   };
 
   $scope.nextQuote = function(){
-    if ($scope.message !== 4){
-      $scope.message++;
+    if ($scope.quote !== 5){
+      $scope.quote++;
     }
-    background.incrementBackground();
+    $state.go('home.'+$scope.quote)
   };
-
-  var sweep = function(){
-    var italicize = 'dutch';
-
-    var rgx = new RegExp('\\b('+italicize+')\\b', 'ig');
-
-    jQuery('.quote').contents().filter(function() {
-        return this.nodeType === 3;
-    }).each(function() {
-        jQuery(this).replaceWith(jQuery(this).text().replace(rgx, '<span class="emphasize">$1</span>'));
-    });
-  };
-
-  $timeout(sweep, 500);
-
 
 }]);
 

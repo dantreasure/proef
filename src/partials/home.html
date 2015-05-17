@@ -1,19 +1,17 @@
 <div class="nav-home">
-	<div class="quote-container">
-		<span class="quote" ng-bind="messages[message]"></span>
-	</div>
+	<div ui-view class="quote-container"></div>
 
 	<footer>
-		<div class="page-navigation" ng-click="previousQuote()">
-			<img src="img/arrow-l.png" ng-class="{ 'active': message > 0}"></img>
+		<div class="page-navigation" ng-click="previousQuote()" ng-show="quote > 1">
+			<img src="img/arrow-l.png"></img>
 		</div>
 
 		<p>
-			<span ng-bind="message + 1 "></span> / 5
+			<span ng-bind="quote"></span> / 5
 		</p>
-		<div class="page-navigation" ng-click="nextQuote()">
-			<img src="img/arrow-r.png" ng-class="{ 'active': message < 4}"></img>
-		</div>
 
+		<div class="page-navigation" ng-click="nextQuote()"  ng-show="quote < 5">
+			<img src="img/arrow-r.png"></img>
+		</div>
 	</footer>
 </div>
