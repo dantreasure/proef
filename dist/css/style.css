@@ -1,8 +1,25 @@
 .nav-about {
   padding-left: 79px; }
 
+.row.nav-approach {
+  max-width: none; }
+
 .nav-approach {
-  padding-left: 79px; }
+  padding-top: 216px; }
+  .nav-approach .article-nmbr {
+    height: 52px;
+    width: 52px;
+    text-align: center;
+    line-height: 52px; }
+    .nav-approach .article-nmbr.active {
+      border: 1px solid black;
+      border-radius: 50%; }
+  .nav-approach .title {
+    height: 123px;
+    font-family: "Grotesk-light", arial, sans-serif;
+    font-size: 123px;
+    line-height: 70px;
+    vertical-align: top; }
 
 .nav-contact {
   padding-left: 79px; }
@@ -47,14 +64,12 @@
   .nav-home footer p {
     font-size: 18px;
     line-height: 18px; }
+  .nav-home footer .page-navigation {
+    cursor: pointer; }
   .nav-home footer img {
     width: 19px;
     height: 7px;
-    margin-bottom: 5px;
-    visibility: hidden;
-    cursor: pointer; }
-    .nav-home footer img.active {
-      visibility: visible; }
+    margin-bottom: 5px; }
 
 body {
   background-image: url("../img/proef-logo.png");
@@ -67,18 +82,26 @@ body {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d; }
   body.mouse-left {
-    cursor: url(../img/cursor-l.png) 0 30, auto; }
+    cursor: url(../img/cursor-l.png) 0 25, auto; }
   body.mouse-right {
-    cursor: url(../img/cursor-r.png) 91 30, auto; }
-  body.background-1 {
-    background-color: #F5F2F2; }
-  body.background-2 {
-    background-color: #EEE7E8; }
-  body.background-3 {
-    background-color: #E4E7E3; }
-  body.background-4 {
-    background-color: #E9E5DF; }
-  body.background-5 {
+    cursor: url(../img/cursor-r.png) 91 25, auto; }
+  body.home\.1 {
+    background-color: #edebe1; }
+  body.home\.2 {
+    background-color: #f5f2f2; }
+  body.home\.3 {
+    background-color: #f0f7eb; }
+  body.home\.4 {
+    background-color: #edebe1; }
+  body.home\.5 {
+    background-color: #f5f2f2; }
+  body.about {
+    background-color: #edebe1; }
+  body.approach {
+    background-color: #f5f2f2; }
+  body.contact {
+    background-color: #f0f7eb; }
+  body.store {
     background-color: #ECE2EA; }
 
 .nav {

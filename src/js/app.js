@@ -6,9 +6,35 @@ proef.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider
     .state('home', {
       url: "/",
+      abstract: true,
       templateUrl: "../partials/home.html",
       controller: "homeCtrl"
     })
+      .state('home.1',{
+        url: '',
+        controller: "homeCtrl",
+        templateUrl: "../partials/home/1.html"
+      })
+      .state('home.2',{
+        url: '',
+        controller: "homeCtrl",
+        templateUrl: "../partials/home/2.html"
+      })
+      .state('home.3',{
+        url: '',
+        controller: "homeCtrl",
+        templateUrl: "../partials/home/3.html"
+      })
+      .state('home.4',{
+        url: '',
+        controller: "homeCtrl",
+        templateUrl: "../partials/home/4.html"
+      })
+      .state('home.5',{
+        url: '',
+        controller: "homeCtrl",
+        templateUrl: "../partials/home/5.html"
+      })
     .state('approach', {
       url: "/approach",
       templateUrl: "../partials/approach.html",
@@ -28,5 +54,6 @@ proef.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     $locationProvider.html5Mode({enabled: true, requireBase: false})
 });
 
-
-
+proef.run(function($rootScope, $state){
+  $rootScope.$state = $state;
+});

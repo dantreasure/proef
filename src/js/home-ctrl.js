@@ -1,40 +1,18 @@
-proef.controller('homeCtrl', ['$scope', 'background','$timeout', function($scope, background, $timeout) {
-  $scope.messages = [
-    '-(n) dutch: to try out, test, experiment.',
-    'Each answer is measured, each project is its own',
-    'this is the third quote',
-    'this is the fourth quote',
-    'this is the fifth quote'
-  ]
-  $scope.message = 0;
+proef.controller('homeCtrl', ['$scope','$state', function($scope, $state) {
+  $scope.quote = 1;
 
   $scope.previousQuote = function(){
-    if ($scope.message !== 0){
-      $scope.message--;
+    if ($scope.quote !== 1){
+      $scope.quote--;
     }
-    background.decrementBackground();
+    $state.go('home.'+$scope.quote)
   };
 
   $scope.nextQuote = function(){
-    if ($scope.message !== 4){
-      $scope.message++;
+    if ($scope.quote !== 5){
+      $scope.quote++;
     }
-    background.incrementBackground();
+    $state.go('home.'+$scope.quote)
   };
-
-  var sweep = function(){
-    var italicize = 'dutch';
-
-    var rgx = new RegExp('\\b('+italicize+')\\b', 'ig');
-
-    jQuery('.quote').contents().filter(function() {
-        return this.nodeType === 3;
-    }).each(function() {
-        jQuery(this).replaceWith(jQuery(this).text().replace(rgx, '<span class="emphasize">$1</span>'));
-    });
-  };
-
-  $timeout(sweep, 500);
-
 
 }]);
