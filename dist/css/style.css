@@ -1,8 +1,25 @@
 .nav-about {
   padding-left: 79px; }
 
+.row.nav-approach {
+  max-width: none; }
+
 .nav-approach {
-  padding-left: 79px; }
+  padding-top: 216px; }
+  .nav-approach .article-nmbr {
+    height: 52px;
+    width: 52px;
+    text-align: center;
+    line-height: 52px; }
+    .nav-approach .article-nmbr.active {
+      border: 1px solid black;
+      border-radius: 50%; }
+  .nav-approach .title {
+    height: 123px;
+    font-family: "Grotesk-light", arial, sans-serif;
+    font-size: 123px;
+    line-height: 70px;
+    vertical-align: top; }
 
 .nav-contact {
   padding-left: 79px; }
