@@ -1,6 +1,6 @@
 (function(window, document, undefined) {
 'use strict';
-var proef = angular.module('proef', ['ui.router']);
+var proef = angular.module('proef', ['ui.router', 'angularSlideables']);
 
 proef.config(["$stateProvider", "$urlRouterProvider", "$locationProvider", function($stateProvider, $urlRouterProvider, $locationProvider) {
   $urlRouterProvider.otherwise("/");
@@ -64,8 +64,40 @@ proef.controller('aboutCtrl', ['$scope', function($scope) {
 	$scope.message = 'this is the about page';
 }]);
 
-proef.controller('approachCtrl', ['$scope', function($scope) {
-	$scope.message = 'this is the approach page';
+proef.controller('approachCtrl', ['$scope','$timeout', function($scope, $timeout) {
+	$scope.articles = {
+		whatWeDo: 'closed',
+		howWeWork: 'closed',
+		whatWeOffer: 'closed',
+		aesthetics: 'closed',
+		clients: 'closed'
+	};
+
+	$scope.activeArticle = function(article){
+		if($scope.articles[article] === 'open' || $scope.articles[article] === 'transition'){
+			return true
+		} else if ($scope.articles[article]=== 'closed'){
+			return false
+		}
+	}
+
+	$scope.articleToggle = function(article){
+		var setToOpen = function(){
+			$scope.articles[article] = 'open';
+		};
+
+		var setToClose = function(){
+			$scope.articles[article] = 'closed';
+		}
+
+		if($scope.articles[article] === 'closed'){
+			$scope.articles[article] = 'transition';
+			$timeout(setToOpen, 1000);
+		} else{
+			$scope.articles[article] = 'transition';
+			$timeout(setToClose, 1000);
+		}
+	}
 }]);
 
 proef.factory('background', function(){
@@ -143,5 +175,55 @@ proef.controller('indexCtrl', ['$scope', 'background', '$location', function($sc
   }
 
 }]);
+
+angular.module('angularSlideables', [])
+.directive('slideable', function () {
+    return {
+        restrict:'C',
+        compile: function (element, attr) {
+            // wrap tag
+            var contents = element.html();
+            element.html('<div class="slideable_content" style="margin:0 !important; padding:0 !important" >' + contents + '</div>');
+
+            return function postLink(scope, element, attrs) {
+                // default properties
+                attrs.duration = (!attrs.duration) ? '1s' : attrs.duration;
+                attrs.easing = (!attrs.easing) ? 'ease-in-out' : attrs.easing;
+                element.css({
+                    'overflow': 'hidden',
+                    'height': '0px',
+                    'transitionProperty': 'height',
+                    'transitionDuration': attrs.duration,
+                    'transitionTimingFunction': attrs.easing
+                });
+            };
+        }
+    };
+})
+.directive('slideToggle', function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            var target, content;
+
+            attrs.expanded = false;
+
+            element.bind('click', function() {
+                if (!target) target = document.querySelector(attrs.slideToggle);
+                if (!content) content = target.querySelector('.slideable_content');
+
+                if(!attrs.expanded) {
+                    content.style.border = '1px solid black';
+                    var y = content.clientHeight;
+                    content.style.border = 0;
+                    target.style.height = y + 'px';
+                } else {
+                    target.style.height = '0px';
+                }
+                attrs.expanded = !attrs.expanded;
+            });
+        }
+    }
+});
 
 })(window, document);

@@ -1,4 +1,4 @@
-var proef = angular.module('proef', ['ui.router']);
+var proef = angular.module('proef', ['ui.router', 'angularSlideables']);
 
 proef.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
   $urlRouterProvider.otherwise("/");
