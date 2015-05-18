@@ -1,25 +1,41 @@
 .nav-about {
   padding-left: 79px; }
 
-.row.nav-approach {
-  max-width: none; }
-
 .nav-approach {
+  max-width: none;
   padding-top: 216px; }
-  .nav-approach .article-nmbr {
+  .nav-approach header.row:nth-child(n+2) {
+    margin-top: 92px; }
+  .nav-approach header.row .article-nmbr {
     height: 52px;
     width: 52px;
     text-align: center;
-    line-height: 52px; }
-    .nav-approach .article-nmbr.active {
+    line-height: 52px;
+    margin: 0 auto;
+    margin-top: 25%; }
+    .nav-approach header.row .article-nmbr.active {
       border: 1px solid black;
       border-radius: 50%; }
-  .nav-approach .title {
-    height: 123px;
-    font-family: "Grotesk-light", arial, sans-serif;
-    font-size: 123px;
-    line-height: 70px;
-    vertical-align: top; }
+  .nav-approach header.row .title-container {
+    padding-left: 0px; }
+    .nav-approach header.row .title-container .title {
+      font-family: "Grotesk-light", arial, sans-serif;
+      font-size: 123px;
+      line-height: 60px;
+      display: table-cell; }
+  .nav-approach article.row {
+    margin-top: 38px; }
+    .nav-approach article.row .article-box {
+      background-color: rgba(255, 255, 255, 0.6); }
+      .nav-approach article.row .article-box.active {
+        border: 1px solid black; }
+    .nav-approach article.row .description p {
+      font-family: "Grotesk-light", arial, sans-serif;
+      font-size: 35px; }
+      .nav-approach article.row .description p:first-child {
+        margin-top: 52px; }
+      .nav-approach article.row .description p:last-child {
+        margin-bottom: 52px; }
 
 .nav-contact {
   padding-left: 79px; }
@@ -81,6 +97,9 @@ body {
   font-family: "Everson-mono", arial, sans-serif;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d; }
+  body p {
+    margin-bottom: 0;
+    line-height: 1; }
   body.mouse-left {
     cursor: url(../img/cursor-l.png) 0 25, auto; }
   body.mouse-right {
@@ -133,8 +152,7 @@ body {
         cursor: inherit;
         color: black;
         font-size: 18px;
-        line-height: 18px;
-        margin-bottom: 0; }
+        line-height: 18px; }
         .nav li div a:hover, .nav li div p:hover {
           cursor: inherit;
           color: black; }
