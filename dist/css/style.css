@@ -12,7 +12,7 @@
     text-align: center;
     line-height: 52px;
     margin: 0 auto;
-    margin-top: 25%; }
+    margin-top: 12.5px; }
     .nav-approach header.row .article-nmbr.active {
       border: 1px solid black;
       border-radius: 50%; }
@@ -23,6 +23,9 @@
       font-size: 123px;
       line-height: 60px;
       display: table-cell; }
+  .nav-approach header.row .icon-up {
+    text-align: center;
+    padding: 15px 0; }
   .nav-approach article.row {
     margin-top: 38px; }
     .nav-approach article.row .article-box {
@@ -36,6 +39,52 @@
         margin-top: 52px; }
       .nav-approach article.row .description p:last-child {
         margin-bottom: 52px; }
+      .nav-approach article.row .description p .footnote {
+        -webkit-transition: .25s;
+                transition: .25s; }
+        .nav-approach article.row .description p .footnote:hover {
+          text-shadow: 3px 2px 3px #b3b3b3;
+          color: #ffffff; }
+        .nav-approach article.row .description p .footnote.active {
+          text-shadow: 3px 2px 3px #b3b3b3;
+          color: #ffffff; }
+    .nav-approach article.row .footnote {
+      width: 470px;
+      height: 170px;
+      background-color: rgba(255, 255, 255, 0.8);
+      overflow-y: hidden;
+      max-height: 0px;
+      -webkit-transition-property: all;
+              transition-property: all;
+      -webkit-transition-duration: .5s;
+              transition-duration: .5s;
+      -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+              transition-timing-function: cubic-bezier(0, 1, 0.5, 1); }
+      .nav-approach article.row .footnote.open {
+        max-height: 170px; }
+      .nav-approach article.row .footnote .box {
+        border: 1px solid black;
+        height: 100%;
+        width: 100%; }
+        .nav-approach article.row .footnote .box .content {
+          padding: 25px 25px 25px 58px; }
+          .nav-approach article.row .footnote .box .content p {
+            font-size: 18px;
+            line-height: 20px; }
+          .nav-approach article.row .footnote .box .content .close-icon {
+            float: right;
+            margin-top: -8px;
+            margin-right: -6px; }
+            .nav-approach article.row .footnote .box .content .close-icon img {
+              width: 14px;
+              height: 14px;
+              -webkit-transition-property: all;
+                      transition-property: all;
+              -webkit-transition-duration: .25s;
+                      transition-duration: .25s; }
+              .nav-approach article.row .footnote .box .content .close-icon img:hover {
+                width: 15px;
+                height: 15px; }
 
 .nav-contact {
   padding-left: 79px; }

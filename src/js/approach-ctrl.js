@@ -7,6 +7,16 @@ proef.controller('approachCtrl', ['$scope','$timeout', function($scope, $timeout
 		clients: 'closed'
 	};
 
+	$scope.footNotes = {
+		market: false,
+		technical: false,
+		cultural: false
+	}
+
+	$scope.toggleFootnote = function(footNote){
+		$scope.footNotes[footNote] = !$scope.footNotes[footNote]
+	}
+
 	$scope.activeArticle = function(article){
 		if($scope.articles[article] === 'open' || $scope.articles[article] === 'transition'){
 			return true

@@ -12,7 +12,7 @@
 			text-align: center
 			line-height: 52px
 			margin: 0 auto
-			margin-top: 25%
+			margin-top: 12.5px
 
 			&.active
 				border: 1px solid black
@@ -27,6 +27,10 @@
 				line-height: 60px
 				display: table-cell
 
+		.icon-up
+			text-align: center
+			padding: 15px 0
+
 	article.row
 		margin-top: 38px
 
@@ -37,6 +41,7 @@
 				border: 1px solid black
 
 		.description
+
 			p
 				font-family: "Grotesk-light", arial, sans-serif
 				font-size: 35px
@@ -46,7 +51,58 @@
 				&:last-child
 					margin-bottom: 52px
 
+				.footnote
+					transition: .25s
 
+					&:hover
+						text-shadow: 3px 2px 3px #b3b3b3
+						color: #ffffff
+
+					&.active
+						text-shadow: 3px 2px 3px #b3b3b3
+						color: #ffffff
+
+		.footnote
+			width: 470px
+			height: 170px
+			background-color: rgba(255,255,255,0.8)
+
+			overflow-y: hidden
+			max-height: 0px
+
+			transition-property: all
+			transition-duration: .5s
+			transition-timing-function: cubic-bezier(0, 1, 0.5, 1)
+
+			&.open
+				max-height: 170px
+
+			.box
+				border: 1px solid black
+				height: 100%
+				width: 100%
+
+				.content
+					padding: 25px 25px 25px 58px
+
+					p
+						font-size: 18px
+						line-height: 20px
+
+					.close-icon
+						float: right
+						margin-top: -8px
+						margin-right: -6px
+
+						img
+							width: 14px
+							height: 14px
+							transition-property: all
+							transition-duration: .25s
+
+							&:hover
+								width: 15px
+								height: 15px
 
 
 
