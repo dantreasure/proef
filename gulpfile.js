@@ -52,7 +52,7 @@ gulp.task('scripts', function() {
     .pipe(concat.header('(function(window, document, undefined) {\n\'use strict\';\n'))
     .pipe(concat.footer('\n})(window, document);\n'))
     .pipe(ngAnnotate())
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest('dist/js'))
     .pipe(livereload())
     .pipe(notify({ message: 'Scripts task complete' }));

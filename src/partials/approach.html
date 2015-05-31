@@ -10,7 +10,7 @@
 			</div>
 			<div class="large-1 columns left">
 				<div class="icon-up" ng-show="activeArticle('whatWeDo')">
-					<img src="img/arrow-up.png" alt="open indication arrow"></img>
+					<img src="img/arrow-up.png" alt="article open"></img>
 				</div>
 			</div>
 		</header>
@@ -24,7 +24,7 @@
 						</p>
 						<br>
 						<p>
-							We translate consumer emotions and map them over trends  (<span class="footnote" ng-click="toggleFootnote('market')" ng-class="{ 'active': footNotes.market }">market-1</span>, technical-2, socio-cultural-3) to provide not only insight but foresight; allowing you to create, develop and market originality.
+							We translate consumer emotions and map them over trends  (<span class="footnote" ng-click="toggleFootnote('whatWeDo','market')" ng-class="{ 'active': whatWeDo.market }">market-1</span>, <span class="footnote" ng-click="toggleFootnote('whatWeDo','technical')" ng-class="{ 'active': whatWeDo.technical }">technical-2</span>, <span class="footnote" ng-click="toggleFootnote('whatWeDo','cultural')" ng-class="{ 'active': footNotes.cultural }">socio-cultural-3</span>) to provide not only insight but foresight; allowing you to create, develop and market originality.
 						</p>
 						<br>
 						<p>
@@ -32,16 +32,43 @@
 						</p>
 					</section>
 				</div>
-				<div class="large-4 columns left">
-					<div class="footnote" ng-class="{ 'open': footNotes.market }">
+				<div class="large-4 columns left" ng-show="footNoteOpen('whatWeDo')">
+					<div class="footnote" ng-show="whatWeDo.market">
 						<div class="box">
 							<div class="content">
 								<div class="close-icon" ng-click="toggleFootnote('market')">
 									<img src="img/close-icon.png" alt="close">
 								</div>
-								<p>1 A market trend is a tendency of financial markets to move in a particular direction over time. These trends are classified as secularA for long time frames, primary for medium </p>
-
-
+								<div class="indication">
+									<img src="img/arrow-small-r.png" alt="footnote open">
+								</div>
+								<p>1 A market trend is a tendency of financial markets to move in a particular direction over time. These trends are classified as secularA for long time frames, primary for medium </p>
+							</div>
+						</div>
+					</div>
+					<div class="footnote small" id="technical" ng-show="whatWeDo.technical">
+						<div class="box">
+							<div class="content-small">
+								<div class="close-icon" ng-click="toggleFootnote('technical')">
+									<img src="img/close-icon-small.png" alt="close">
+								</div>
+								<div class="indication">
+									<img src="img/arrow-small-r.png" alt="footnote open">
+								</div>
+								<p>B Other Word (n) This is placeholder text do not read this sentence.</p>
+							</div>
+						</div>
+					</div>
+					<div class="footnote small" id="cultural" ng-show="whatWeDo.cultural">
+						<div class="box">
+							<div class="content-small">
+								<div class="close-icon" ng-click="toggleFootnote('cultural')">
+									<img src="img/close-icon-small.png" alt="close">
+								</div>
+								<div class="indication">
+									<img src="img/arrow-small-r.png" alt="footnote open">
+								</div>
+								<p>A Secular (n) This is placeholder text do not read this sentence.</p>
 							</div>
 						</div>
 					</div>
@@ -72,13 +99,54 @@
 						</p>
 						<br>
 						<p>
-							Our approach is dynamic-1, nothing is pre-packaged. We will create a tailored team-2 and strategy-3, to give you a holistic vision, based on future opportunities.
+							Our approach is <span class="footnote" ng-click="toggleFootnote('howWeWork','dynamic')" ng-class="{ 'active': howWeWork.dynamic }">dynamic-1</span>, nothing is pre-packaged. We will create a tailored <span class="footnote" ng-click="toggleFootnote('howWeWork','team')" ng-class="{ 'active': howWeWork.team }">team-2</span> and <span class="footnote" ng-click="toggleFootnote('howWeWork','strategy')" ng-class="{ 'active': howWeWork.strategy }">strategy-3</span>, to give you a holistic vision, based on future opportunities.
 						</p>
 						<br>
 						<p>
 							We inspire, identify, clarify, and translate; Proef can help you see it through. From long term strategy to the smallest details.
 						</p>
 					</section>
+				</div>
+				<div class="large-4 columns left" ng-show="footNoteOpen('howWeWork')">
+					<div class="footnote" ng-show="howWeWork.dynamic">
+						<div class="box">
+							<div class="content">
+								<div class="close-icon" ng-click="toggleFootnote('howWeWork','dynamic')">
+									<img src="img/close-icon.png" alt="close">
+								</div>
+								<div class="indication">
+									<img src="img/arrow-small-r.png" alt="footnote open">
+								</div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis minus debitis commodi maiores corrupti officia atque, quam aliquid ea, assumenda necessitatibus voluptates a voluptatem quaerat eligendi cum vitae incidunt nihil! </p>
+							</div>
+						</div>
+					</div>
+					<div class="footnote small" id="team" ng-show="howWeWork.team">
+						<div class="box">
+							<div class="content-small">
+								<div class="close-icon" ng-click="toggleFootnote('howWeWork','team')">
+									<img src="img/close-icon.png" alt="close">
+								</div>
+								<div class="indication">
+									<img src="img/arrow-small-r.png" alt="footnote open">
+								</div>
+								<p>This is placeholder text do not read this sentence. </p>
+							</div>
+						</div>
+					</div>
+					<div class="footnote small" id="strategy" ng-show="howWeWork.strategy">
+						<div class="box">
+							<div class="content-small">
+								<div class="close-icon" ng-click="toggleFootnote('howWeWork','strategy')">
+									<img src="img/close-icon.png" alt="close">
+								</div>
+								<div class="indication">
+									<img src="img/arrow-small-r.png" alt="footnote open">
+								</div>
+								<p>This is placeholder text do not read this sentence. </p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</article>
@@ -106,8 +174,9 @@
 						</p>
 						<br>
 						<p>
-							Trend forecasting / Finding your vision; opportunity, positioning, strategy / Material, style and color forecasting and direction / Concept development / Brand and product strategy / Brand, marketing and design direction / Color, material and finish application / Workshops and exhibitions
+							Trend forecasting / Finding your vision; opportunity, positioning, strategy / Material, <span ng-mouseover="launchImage()">style and color forecasting and direction</span> / Concept development / Brand and product strategy / Brand, marketing and design direction / Color, material and finish application / Workshops and exhibitions
 						</p>
+						<p>image <span ng-show="showImage">on</span></p>
 					</section>
 				</div>
 			</div>
