@@ -20,11 +20,16 @@
       font-size: 123px;
       line-height: 60px;
       display: table-cell; }
+      .nav-about header.row .title-container .title.leader {
+        letter-spacing: -3px; }
   .nav-about header.row .icon-up {
     text-align: center;
     padding: 15px 0; }
   .nav-about article.row {
     margin-top: 38px; }
+    .nav-about article.row .icon-up {
+      text-align: center;
+      padding: 15px 0; }
     .nav-about article.row .article-box {
       background-color: rgba(255, 255, 255, 0.6); }
       .nav-about article.row .article-box.active {

@@ -30,7 +30,7 @@
 			</div>
 		</article>
 
-		<header class="row" slide-toggle="#leadership" ng-click="articleToggle('leadership')">
+		<header class="row" ng-click="articleToggle('leadership')">
 			<div class="large-1 large-offset-1 columns text-center">
 				<div class="article-nmbr" ng-class="{ 'active': activeArticle('leadership') }">2</div>
 			</div>
@@ -44,18 +44,18 @@
 			</div>
 		</header>
 
-		<article class="row">
-			<div class="large-10 large-offset-1 columns article-box" ng-class="{ 'active': activeArticle('leadership') }">
-				<div id="leadership" class="slideable large-5 large-offset-1 columns">
-					<section class="description">
-						<p>
-							Together, we can get to know who you are; your paradigm, perspective and needs. We help you be you.
-						</p>
-						<br>
-					</section>
+		<header class="row">
+			<div class="leader-row">
+				<div class="large-8 large-offset-2 columns left title-container">
+					<div class="title leader">Marieke van der Poel</div>
+				</div>
+				<div class="large-1 columns left">
+					<div class="icon-up" ng-show="activeArticle('leadership')">
+						<img src="img/arrow-up.png"></img>
+					</div>
 				</div>
 			</div>
-		</article>
+		</header>
 
 		<header class="row" slide-toggle="#locations" ng-click="articleToggle('locations')">
 			<div class="large-1 large-offset-1 columns text-center">
