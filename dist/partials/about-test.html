@@ -1,0 +1,197 @@
+<div class="nav-about row left">
+	<div class="large-12 columns">
+
+		<header class="row" slide-toggle="#whoWeAre" ng-click="articleToggle('whoWeAre')">
+			<div class="large-1 large-offset-1 columns text-center">
+				<div class="article-nmbr" ng-class="{ 'active': activeArticle('whoWeAre') }">1</div>
+			</div>
+			<div class="large-8 columns left title-container">
+				<div class="title">Who we are</div>
+			</div>
+			<div class="large-1 columns left">
+				<div class="icon-up" ng-show="activeArticle('whoWeAre')">
+					<img src="img/arrow-up.png" alt="article open"></img>
+				</div>
+			</div>
+		</header>
+
+		<article class="row">
+			<div class="large-10 large-offset-1 columns article-box" ng-class="{ 'active': activeArticle('whoWeAre') }">
+				<div id="whoWeAre" class="slideable large-5 large-offset-1 columns">
+					<section class="description">
+						<p>
+							We make the lateral linear and the imaginable possible. To us, it is important not to create generalized content; instead we are tailored, personable, and tangible. We apply ourselves across many industries and places, making us agile and innovative–1. We work hard and are straightforward in our answers.
+						</p>
+						<p>
+							We believe in beauty, and we are always original.
+						</p>
+					</section>
+				</div>
+			</div>
+		</article>
+
+		<header class="row" slide-toggle="#leadership" ng-click="articleToggle('leadership')">
+			<div class="large-1 large-offset-1 columns text-center">
+				<div class="article-nmbr" ng-class="{ 'active': activeArticle('leadership') }">2</div>
+			</div>
+			<div class="large-8 columns left title-container">
+				<div class="title">Leadership</div>
+			</div>
+			<div class="large-1 columns left">
+				<div class="icon-up" ng-show="activeArticle('leadership')">
+					<img src="img/arrow-up.png"></img>
+				</div>
+			</div>
+		</header>
+
+		<article class="row">
+			<div class="large-10 large-offset-1 columns article-box" ng-class="{ 'active': activeArticle('leadership') }">
+				<div id="leadership" class="slideable large-5 large-offset-1 columns">
+					<section class="description">
+						<p>
+							Together, we can get to know who you are; your paradigm, perspective and needs. We help you be you.
+						</p>
+						<br>
+						<p>
+							Our approach is <span class="footnote" ng-click="toggleFootnote('howWeWork','dynamic')" ng-class="{ 'active': howWeWork.dynamic }">dynamic-1</span>, nothing is pre-packaged. We will create a tailored <span class="footnote" ng-click="toggleFootnote('howWeWork','team')" ng-class="{ 'active': howWeWork.team }">team-2</span> and <span class="footnote" ng-click="toggleFootnote('howWeWork','strategy')" ng-class="{ 'active': howWeWork.strategy }">strategy-3</span>, to give you a holistic vision, based on future opportunities.
+						</p>
+						<br>
+						<p>
+							We inspire, identify, clarify, and translate; Proef can help you see it through. From long term strategy to the smallest details.
+						</p>
+					</section>
+				</div>
+				<div class="large-4 columns left" ng-show="footNoteOpen('howWeWork')">
+					<div class="footnote" ng-show="howWeWork.dynamic">
+						<div class="box">
+							<div class="content">
+								<div class="close-icon" ng-click="toggleFootnote('howWeWork','dynamic')">
+									<img src="img/close-icon.png" alt="close">
+								</div>
+								<div class="indication">
+									<img src="img/arrow-small-r.png" alt="footnote open">
+								</div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis minus debitis commodi maiores corrupti officia atque, quam aliquid ea, assumenda necessitatibus voluptates a voluptatem quaerat eligendi cum vitae incidunt nihil! </p>
+							</div>
+						</div>
+					</div>
+					<div class="footnote small" id="team" ng-show="howWeWork.team">
+						<div class="box">
+							<div class="content-small">
+								<div class="close-icon" ng-click="toggleFootnote('howWeWork','team')">
+									<img src="img/close-icon.png" alt="close">
+								</div>
+								<div class="indication">
+									<img src="img/arrow-small-r.png" alt="footnote open">
+								</div>
+								<p>This is placeholder text do not read this sentence. </p>
+							</div>
+						</div>
+					</div>
+					<div class="footnote small" id="strategy" ng-show="howWeWork.strategy">
+						<div class="box">
+							<div class="content-small">
+								<div class="close-icon" ng-click="toggleFootnote('howWeWork','strategy')">
+									<img src="img/close-icon.png" alt="close">
+								</div>
+								<div class="indication">
+									<img src="img/arrow-small-r.png" alt="footnote open">
+								</div>
+								<p>This is placeholder text do not read this sentence. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<header class="row" slide-toggle="#whatWeOffer" ng-click="articleToggle('whatWeOffer')">
+			<div class="large-1 large-offset-1 columns text-center">
+				<div class="article-nmbr" ng-class="{ 'active': activeArticle('whatWeOffer') }">3</div>
+			</div>
+			<div class="large-8 columns left title-container">
+				<div class="title">What we offer</div>
+			</div>
+			<div class="large-1 columns left">
+				<div class="icon-up" ng-show="activeArticle('whatWeOffer')">
+					<img src="img/arrow-up.png"></img>
+				</div>
+			</div>
+		</header>
+
+		<article class="row">
+			<div class="large-10 large-offset-1 columns article-box" ng-class="{ 'active': activeArticle('whatWeOffer') }">
+				<div id="whatWeOffer" class="slideable large-5 large-offset-1 columns">
+					<section class="description">
+						<p>
+							We offer tailored insight to create, support and develop your vision:
+						</p>
+						<br>
+						<p>
+							Trend forecasting / Finding your vision; opportunity, positioning, strategy / Material, <span ng-mouseover="launchImage()">style and color forecasting and direction</span> / Concept development / Brand and product strategy / Brand, marketing and design direction / Color, material and finish application / Workshops and exhibitions
+						</p>
+						<p>image <span ng-show="showImage">on</span></p>
+					</section>
+				</div>
+			</div>
+		</article>
+
+		<header class="row" slide-toggle="#aesthetics" ng-click="articleToggle('aesthetics')">
+			<div class="large-1 large-offset-1 columns text-center">
+				<div class="article-nmbr" ng-class="{ 'active': activeArticle('aesthetics') }">4</div>
+			</div>
+			<div class="large-8 columns left title-container">
+				<div class="title">Aesthetics</div>
+			</div>
+			<div class="large-1 columns left">
+				<div class="icon-up" ng-show="activeArticle('aesthetics')">
+					<img src="img/arrow-up.png"></img>
+				</div>
+			</div>
+		</header>
+
+		<article class="row">
+			<div class="large-10 large-offset-1 columns article-box" ng-class="{ 'active': activeArticle('aesthetics') }">
+				<div id="aesthetics" class="slideable large-5 large-offset-1 columns">
+					<section class="description">
+						<p>
+						We offer tailored insight to create, support and develop your vision:
+						</p>
+						<br>
+						<p>
+							gif (will be provided)
+						</p>
+					</section>
+				</div>
+			</div>
+		</article>
+
+		<header class="row" slide-toggle="#clients" ng-click="articleToggle('clients')">
+			<div class="large-1 large-offset-1 columns text-center">
+				<div class="article-nmbr" ng-class="{ 'active': activeArticle('clients') }">5</div>
+			</div>
+			<div class="large-8 columns left title-container">
+				<div class="title">Clients</div>
+			</div>
+			<div class="large-1 columns left">
+				<div class="icon-up" ng-show="activeArticle('clients')">
+					<img src="img/arrow-up.png"></img>
+				</div>
+			</div>
+		</header>
+
+		<article class="row">
+			<div class="large-10 large-offset-1 columns article-box" ng-class="{ 'active': activeArticle('clients') }">
+				<div id="clients" class="slideable large-5 large-offset-1 columns">
+					<section class="description">
+						<p>
+							Samsung/ Gregory / Maybelline / Nude Audio / Sperry topsiders / Neurosky / Carhartt / Kaiser Permanente / BSSP / Atmel / SOL Republic / Sorel  / Petedge / Polyera / Walmart.com / HP / Logitech / Cisco / GAP / Levi’s
+						</p>
+					</section>
+				</div>
+			</div>
+		</article>
+
+	</div>
+
+</div>
