@@ -12,7 +12,7 @@
 			text-align: center
 			line-height: 52px
 			margin: 0 auto
-			margin-top: 25%
+			margin-top: 12.5px
 
 			&.active
 				border: 1px solid black
@@ -27,6 +27,10 @@
 				line-height: 60px
 				display: table-cell
 
+		.icon-up
+			text-align: center
+			padding: 15px 0
+
 	article.row
 		margin-top: 38px
 
@@ -37,16 +41,96 @@
 				border: 1px solid black
 
 		.description
+
 			p
 				font-family: "Grotesk-light", arial, sans-serif
 				font-size: 35px
+				line-height: 40px
 
 				&:first-child
 					margin-top: 52px
 				&:last-child
 					margin-bottom: 52px
 
+				.footnote
+					transition: .25s
 
+					&:hover
+						text-shadow: 3px 2px 3px #b3b3b3
+						color: #ffffff
+
+					&.active
+						text-shadow: 3px 2px 3px #b3b3b3
+						color: #ffffff
+
+		.footnote
+			margin-top: 100px
+			width: 470px
+			height: 170px
+			background-color: rgba(255,255,255,0.8)
+
+			&.small
+				margin-top: 0px
+				height: 86px
+				width: 255px
+
+				.content-small
+					padding: 13px 40px 13px 44px
+
+					p
+						font-size: 14px
+						line-height: 16px
+
+					.close-icon
+						float: right
+						margin-top: -8px
+						margin-right: -6px
+
+					.indication
+						float: left
+						margin-left: -35px
+						margin-top: -7px
+
+
+			&#technical
+				position: absolute
+				left: 280px
+				top: 155px
+			&#cultural
+				position: absolute
+				top: 202px
+				left: 130px
+			&#strategy
+				position: absolute
+				left: 280px
+				top: 155px
+			&#team
+				position: absolute
+				top: 202px
+				left: 130px
+
+
+			.box
+				border: 1px solid black
+				height: 100%
+				width: 100%
+
+				.content
+					padding: 25px 25px 25px 58px
+
+					p
+						font-size: 18px
+						line-height: 20px
+
+					.close-icon
+						float: right
+						margin-top: -8px
+						margin-right: -6px
+
+					.indication
+						float: left
+						margin-left: -38px
+						margin-top: -6px
 
 
 

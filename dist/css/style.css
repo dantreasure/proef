@@ -12,7 +12,7 @@
     text-align: center;
     line-height: 52px;
     margin: 0 auto;
-    margin-top: 25%; }
+    margin-top: 12.5px; }
     .nav-approach header.row .article-nmbr.active {
       border: 1px solid black;
       border-radius: 50%; }
@@ -23,6 +23,9 @@
       font-size: 123px;
       line-height: 60px;
       display: table-cell; }
+  .nav-approach header.row .icon-up {
+    text-align: center;
+    padding: 15px 0; }
   .nav-approach article.row {
     margin-top: 38px; }
     .nav-approach article.row .article-box {
@@ -31,11 +34,76 @@
         border: 1px solid black; }
     .nav-approach article.row .description p {
       font-family: "Grotesk-light", arial, sans-serif;
-      font-size: 35px; }
+      font-size: 35px;
+      line-height: 40px; }
       .nav-approach article.row .description p:first-child {
         margin-top: 52px; }
       .nav-approach article.row .description p:last-child {
         margin-bottom: 52px; }
+      .nav-approach article.row .description p .footnote {
+        -webkit-transition: .25s;
+                transition: .25s; }
+        .nav-approach article.row .description p .footnote:hover {
+          text-shadow: 3px 2px 3px #b3b3b3;
+          color: #ffffff; }
+        .nav-approach article.row .description p .footnote.active {
+          text-shadow: 3px 2px 3px #b3b3b3;
+          color: #ffffff; }
+    .nav-approach article.row .footnote {
+      margin-top: 100px;
+      width: 470px;
+      height: 170px;
+      background-color: rgba(255, 255, 255, 0.8); }
+      .nav-approach article.row .footnote.small {
+        margin-top: 0px;
+        height: 86px;
+        width: 255px; }
+        .nav-approach article.row .footnote.small .content-small {
+          padding: 13px 40px 13px 44px; }
+          .nav-approach article.row .footnote.small .content-small p {
+            font-size: 14px;
+            line-height: 16px; }
+          .nav-approach article.row .footnote.small .content-small .close-icon {
+            float: right;
+            margin-top: -8px;
+            margin-right: -6px; }
+          .nav-approach article.row .footnote.small .content-small .indication {
+            float: left;
+            margin-left: -35px;
+            margin-top: -7px; }
+      .nav-approach article.row .footnote#technical {
+        position: absolute;
+        left: 280px;
+        top: 155px; }
+      .nav-approach article.row .footnote#cultural {
+        position: absolute;
+        top: 202px;
+        left: 130px; }
+      .nav-approach article.row .footnote#strategy {
+        position: absolute;
+        left: 280px;
+        top: 155px; }
+      .nav-approach article.row .footnote#team {
+        position: absolute;
+        top: 202px;
+        left: 130px; }
+      .nav-approach article.row .footnote .box {
+        border: 1px solid black;
+        height: 100%;
+        width: 100%; }
+        .nav-approach article.row .footnote .box .content {
+          padding: 25px 25px 25px 58px; }
+          .nav-approach article.row .footnote .box .content p {
+            font-size: 18px;
+            line-height: 20px; }
+          .nav-approach article.row .footnote .box .content .close-icon {
+            float: right;
+            margin-top: -8px;
+            margin-right: -6px; }
+          .nav-approach article.row .footnote .box .content .indication {
+            float: left;
+            margin-left: -38px;
+            margin-top: -6px; }
 
 .nav-contact {
   padding-left: 79px; }
@@ -52,9 +120,9 @@
   font-family: "Grotesk-light-italic";
   src: url("../fonts/foundersgrotesktext-lightitalic.woff"); }
 
-
 .nav-home .emphasize {
   font-family: "Grotesk-light-italic", arial, sans-serif; }
+
 .nav-home .quote-container {
   text-align: center;
   font-family: "Grotesk-light", arial, sans-serif;
@@ -66,8 +134,10 @@
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
+
 .nav-home .quote {
   line-height: 0; }
+
 .nav-home footer {
   width: 100%;
   height: 18px;
@@ -159,4 +229,3 @@ body {
 
 ul.nav {
   font-family: "Everson-mono", arial, sans-serif; }
-
