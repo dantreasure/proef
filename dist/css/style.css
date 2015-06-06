@@ -1,32 +1,42 @@
 .nav-about {
   max-width: none;
   padding-top: 216px; }
-  .nav-about header.row:nth-child(n+2) {
-    margin-top: 92px; }
-  .nav-about header.row .article-nmbr {
-    height: 52px;
-    width: 52px;
-    text-align: center;
-    line-height: 52px;
-    margin: 0 auto;
-    margin-top: 12.5px; }
-    .nav-about header.row .article-nmbr.active {
-      border: 1px solid black;
-      border-radius: 50%; }
-  .nav-about header.row .title-container {
-    padding-left: 0px; }
-    .nav-about header.row .title-container .title {
-      font-family: "Grotesk-light", arial, sans-serif;
-      font-size: 123px;
-      line-height: 60px;
-      display: table-cell; }
-      .nav-about header.row .title-container .title.leader {
-        letter-spacing: -3px; }
-  .nav-about header.row .icon-up {
-    text-align: center;
-    padding: 15px 0; }
+  .nav-about header.row {
+    margin-bottom: 38px; }
+    .nav-about header.row .divider {
+      margin-bottom: 38px;
+      height: 0px;
+      border-top: 1px solid black; }
+      .nav-about header.row .divider * {
+        visibility: hidden; }
+    .nav-about header.row .leader-row {
+      padding-left: 0px; }
+    .nav-about header.row .article-nmbr {
+      height: 52px;
+      width: 52px;
+      text-align: center;
+      line-height: 52px;
+      margin: 0 auto;
+      margin-top: 12.5px; }
+      .nav-about header.row .article-nmbr.active {
+        border: 1px solid black;
+        border-radius: 50%; }
+    .nav-about header.row .title-container {
+      padding-left: 0px; }
+      .nav-about header.row .title-container .title {
+        font-family: "Grotesk-light", arial, sans-serif;
+        font-size: 123px;
+        line-height: 60px;
+        display: table-cell; }
+        .nav-about header.row .title-container .title.leader {
+          letter-spacing: -3px; }
+    .nav-about header.row .icon-up {
+      text-align: center;
+      padding: 15px 0; }
   .nav-about article.row {
-    margin-top: 38px; }
+    margin: 0 0 0px 0; }
+    .nav-about article.row.active {
+      margin-bottom: 38px; }
     .nav-about article.row .icon-up {
       text-align: center;
       padding: 15px 0; }

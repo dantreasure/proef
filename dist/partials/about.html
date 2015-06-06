@@ -14,7 +14,7 @@
 			</div>
 		</header>
 
-		<article class="row">
+		<article class="row" ng-class="{ 'active': activeArticle('whoWeAre') }">
 			<div class="large-10 large-offset-1 columns article-box" ng-class="{ 'active': activeArticle('whoWeAre') }">
 				<div id="whoWeAre" class="slideable large-5 large-offset-1 columns">
 					<section class="description">
@@ -45,6 +45,9 @@
 		</header>
 
 		<header class="row">
+			<div class="large-9 large-offset-2 columns divider">
+				<div>content</div>
+			</div>
 			<div class="leader-row">
 				<div class="large-8 large-offset-2 columns left title-container">
 					<div class="title leader">Marieke van der Poel</div>
@@ -71,7 +74,7 @@
 			</div>
 		</header>
 
-		<article class="row">
+		<article class="row" ng-class="{ 'active': activeArticle('whoWeAre') }">
 			<div class="large-10 large-offset-1 columns article-box" ng-class="{ 'active': activeArticle('locations') }">
 				<div id="locations" class="slideable large-5 large-offset-1 columns">
 					<section class="description">
@@ -97,7 +100,7 @@
 			</div>
 		</header>
 
-		<article class="row">
+		<article class="row" ng-class="{ 'active': activeArticle('whoWeAre') }">
 			<div class="large-10 large-offset-1 columns article-box" ng-class="{ 'active': activeArticle('news') }">
 				<div id="news" class="slideable large-5 large-offset-1 columns">
 					<section class="description">
