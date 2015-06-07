@@ -1,16 +1,29 @@
 .nav-about {
   max-width: none;
   padding-top: 216px; }
-  .nav-about header.row {
-    margin-bottom: 38px; }
-    .nav-about header.row .divider {
+  .nav-about div.leaders {
+    overflow: hidden;
+    overflow-y: hidden;
+    max-height: 2000px;
+    /* approximate max height */
+    -webkit-transition-property: all;
+            transition-property: all;
+    -webkit-transition-duration: .7s;
+            transition-duration: .7s;
+    -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+            transition-timing-function: cubic-bezier(0, 1, 0.5, 1); }
+    .nav-about div.leaders.closed {
+      max-height: 0px; }
+    .nav-about div.leaders .divider {
       margin-bottom: 38px;
       height: 0px;
       border-top: 1px solid black; }
-      .nav-about header.row .divider * {
+      .nav-about div.leaders .divider * {
         visibility: hidden; }
-    .nav-about header.row .leader-row {
-      padding-left: 0px; }
+  .nav-about header.row {
+    margin-bottom: 38px; }
+    .nav-about header.row:nth-child(n+2) {
+      margin-top: 55px; }
     .nav-about header.row .article-nmbr {
       height: 52px;
       width: 52px;
@@ -21,18 +34,18 @@
       .nav-about header.row .article-nmbr.active {
         border: 1px solid black;
         border-radius: 50%; }
-    .nav-about header.row .title-container {
-      padding-left: 0px; }
-      .nav-about header.row .title-container .title {
-        font-family: "Grotesk-light", arial, sans-serif;
-        font-size: 123px;
-        line-height: 60px;
-        display: table-cell; }
-        .nav-about header.row .title-container .title.leader {
-          letter-spacing: -3px; }
-    .nav-about header.row .icon-up {
-      text-align: center;
-      padding: 15px 0; }
+  .nav-about .title-container {
+    padding-left: 0px; }
+    .nav-about .title-container .title {
+      font-family: "Grotesk-light", arial, sans-serif;
+      font-size: 123px;
+      line-height: 60px;
+      display: table-cell; }
+      .nav-about .title-container .title.leader {
+        letter-spacing: -3px; }
+  .nav-about .icon-up {
+    text-align: center !important;
+    padding: 15px 0 !important; }
   .nav-about article.row {
     margin: 0 0 0px 0; }
     .nav-about article.row.active {
@@ -40,39 +53,43 @@
     .nav-about article.row .icon-up {
       text-align: center;
       padding: 15px 0; }
-    .nav-about article.row .article-box {
-      background-color: rgba(255, 255, 255, 0.6); }
-      .nav-about article.row .article-box.active {
-        border: 1px solid black; }
-    .nav-about article.row .description p {
-      font-family: "Grotesk-light", arial, sans-serif;
-      font-size: 35px;
-      line-height: 40px; }
-      .nav-about article.row .description p:first-child {
-        margin-top: 52px; }
-      .nav-about article.row .description p:last-child {
-        margin-bottom: 52px; }
-    .nav-about article.row .description .box {
-      border: 1px solid black;
-      height: 100%;
-      width: 100%; }
-      .nav-about article.row .description .box .content {
-        padding: 25px 25px 25px 58px; }
-        .nav-about article.row .description .box .content p {
-          font-size: 18px;
-          line-height: 20px; }
-        .nav-about article.row .description .box .content .close-icon {
-          float: right;
-          margin-top: -8px;
-          margin-right: -6px; }
-        .nav-about article.row .description .box .content .indication {
-          float: left;
-          margin-left: -38px;
-          margin-top: -6px; }
+  .nav-about .article-box {
+    background-color: rgba(255, 255, 255, 0.6); }
+    .nav-about .article-box.leader {
+      margin-top: 38px; }
+    .nav-about .article-box.active {
+      border: 1px solid black; }
+  .nav-about .description p {
+    font-family: "Grotesk-light", arial, sans-serif;
+    font-size: 35px;
+    line-height: 40px; }
+    .nav-about .description p:first-child {
+      margin-top: 52px; }
+    .nav-about .description p:last-child {
+      margin-bottom: 52px; }
+  .nav-about .description .box {
+    border: 1px solid black;
+    height: 100%;
+    width: 100%; }
+    .nav-about .description .box .content {
+      padding: 25px 25px 25px 58px; }
+      .nav-about .description .box .content p {
+        font-size: 18px;
+        line-height: 20px; }
+      .nav-about .description .box .content .close-icon {
+        float: right;
+        margin-top: -8px;
+        margin-right: -6px; }
+      .nav-about .description .box .content .indication {
+        float: left;
+        margin-left: -38px;
+        margin-top: -6px; }
 
 .nav-approach {
   max-width: none;
   padding-top: 216px; }
+  .nav-approach * {
+    border: 1px solid black; }
   .nav-approach header.row:nth-child(n+2) {
     margin-top: 92px; }
   .nav-approach header.row .article-nmbr {
