@@ -58,7 +58,7 @@
 					</div>
 				</div>
 			</div>
-			<article class="leader-content" ng-class="{ 'active': activeLeader('marieke') }">
+			<article>
 				<div class="large-10 large-offset-1 columns article-box leader" ng-class="{ 'active': activeLeader('marieke') }">
 					<div id="marieke" class="slideable large-5 large-offset-1 left columns">
 						<section class="description">
@@ -95,7 +95,7 @@
 					</div>
 				</div>
 			</div>
-			<article class="leader-content" ng-class="{ 'active': activeLeader('julie') }">
+			<article>
 				<div class="large-10 large-offset-1 columns article-box leader" ng-class="{ 'active': activeLeader('julie') }">
 					<div id="julie" class="slideable large-5 large-offset-1 left columns">
 						<section class="description">
@@ -124,7 +124,7 @@
 					</div>
 				</div>
 			</div>
-			<article class="leader-content" ng-class="{ 'active': activeLeader('sydel') }">
+			<article>
 				<div class="large-10 large-offset-1 columns article-box leader" ng-class="{ 'active': activeLeader('sydel') }">
 					<div id="sydel" class="slideable large-5 large-offset-1 left columns">
 						<section class="description">
@@ -145,11 +145,11 @@
 			</article>
 		</div>
 
-		<header class="row" slide-toggle="#locations" ng-click="articleToggle('locations')">
+		<header class="row">
 			<div class="large-1 large-offset-1 columns text-center">
 				<div class="article-nmbr" ng-class="{ 'active': activeArticle('locations') }">3</div>
 			</div>
-			<div class="large-8 columns left title-container">
+			<div class="large-8 columns left title-container" ng-click="toggleLocation()">
 				<div class="title">Locations</div>
 			</div>
 			<div class="large-1 columns left">
@@ -159,17 +159,85 @@
 			</div>
 		</header>
 
-		<article class="row" ng-class="{ 'active': activeArticle('whoWeAre') }">
-			<div class="large-10 large-offset-1 columns article-box" ng-class="{ 'active': activeArticle('locations') }">
-				<div id="locations" class="slideable large-5 large-offset-1 columns">
-					<section class="description">
-						<p>
-							We offer tailored insight to create, support and develop your vision:
-						</p>
-					</section>
+		<div class="locations row" ng-class="{ 'closed': !locationsOpen }">
+			<div class="large-10 large-offset-1 columns divider">
+				<div></div>
+			</div>
+
+			<div slide-toggle="#sanfrancisco" ng-click="locationToggle('sanfrancisco')">
+				<div class="large-8 large-offset-2 columns left title-container">
+					<div class="title leader">San Francisco</div>
+				</div>
+				<div class="large-1 columns left">
+					<div class="icon-up" ng-show="activeLocation('sanfrancisco')">
+						<img src="img/arrow-up.png"></img>
+					</div>
 				</div>
 			</div>
-		</article>
+			<article>
+				<div class="large-10 large-offset-1 columns article-box leader" ng-class="{ 'active': activeLocation('sanfrancisco') }">
+					<div id="sanfrancisco" class="slideable large-9 large-offset-1 left columns">
+						<iframe width="1400" height="465" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=1179%20Church%20Street%2C%20San%20Francisco%2C%20CA%2C%20United%20States&key=AIzaSyAGpoEH2Bb_ijqHuwVQ-6M9nbZHVW7EHPo&zoom=11"></iframe>
+					</div>
+				</div>
+			</article>
+
+			<div slide-toggle="#losangeles" ng-click="locationToggle('losangeles')">
+				<div class="large-8 large-offset-2 columns left title-container">
+					<div class="title leader">Los Angeles</div>
+				</div>
+				<div class="large-1 columns left">
+					<div class="icon-up" ng-show="activeLocation('losangeles')">
+						<img src="img/arrow-up.png"></img>
+					</div>
+				</div>
+			</div>
+			<article>
+				<div class="large-10 large-offset-1 columns article-box leader" ng-class="{ 'active': activeLocation('losangeles') }">
+					<div id="losangeles" class="slideable large-9 large-offset-1 left columns">
+						<iframe width="1400" height="465" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=1179%20Church%20Street%2C%20San%20Francisco%2C%20CA%2C%20United%20States&key=AIzaSyAGpoEH2Bb_ijqHuwVQ-6M9nbZHVW7EHPo&zoom=11"></iframe>
+					</div>
+				</div>
+			</article>
+
+			<div slide-toggle="#newyork" ng-click="locationToggle('newyork')">
+				<div class="large-8 large-offset-2 columns left title-container">
+					<div class="title leader">New York</div>
+				</div>
+				<div class="large-1 columns left">
+					<div class="icon-up" ng-show="activeLocation('newyork')">
+						<img src="img/arrow-up.png"></img>
+					</div>
+				</div>
+			</div>
+			<article>
+				<div class="large-10 large-offset-1 columns article-box leader" ng-class="{ 'active': activeLocation('newyork') }">
+					<div id="newyork" class="slideable large-9 large-offset-1 left columns">
+						<iframe width="1400" height="465" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=1179%20Church%20Street%2C%20San%20Francisco%2C%20CA%2C%20United%20States&key=AIzaSyAGpoEH2Bb_ijqHuwVQ-6M9nbZHVW7EHPo&zoom=11"></iframe>
+					</div>
+				</div>
+			</article>
+
+			<div slide-toggle="#saltlake" ng-click="locationToggle('saltlake')">
+				<div class="large-8 large-offset-2 columns left title-container">
+					<div class="title leader">Salt Lake City</div>
+				</div>
+				<div class="large-1 columns left">
+					<div class="icon-up" ng-show="activeLocation('saltlake')">
+						<img src="img/arrow-up.png"></img>
+					</div>
+				</div>
+			</div>
+			<article>
+				<div class="large-10 large-offset-1 columns article-box leader" ng-class="{ 'active': activeLocation('saltlake') }">
+					<div id="saltlake" class="slideable large-6 large-offset-1 right columns">
+						<iframe width="600" height="470" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=1179%20Church%20Street%2C%20San%20Francisco%2C%20CA%2C%20United%20States&key=AIzaSyAGpoEH2Bb_ijqHuwVQ-6M9nbZHVW7EHPo&zoom=11"></iframe>
+					</div>
+				</div>
+			</article>
+		</div>
+
+
 
 		<header class="row" slide-toggle="#news" ng-click="articleToggle('news')">
 			<div class="large-1 large-offset-1 columns text-center">

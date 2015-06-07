@@ -1,10 +1,10 @@
 .nav-about {
   max-width: none;
   padding-top: 216px; }
-  .nav-about div.leaders {
+  .nav-about div.leaders, .nav-about div.locations {
     overflow: hidden;
     overflow-y: hidden;
-    max-height: 2000px;
+    max-height: 7000px;
     /* approximate max height */
     -webkit-transition-property: all;
             transition-property: all;
@@ -12,13 +12,13 @@
             transition-duration: .7s;
     -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
             transition-timing-function: cubic-bezier(0, 1, 0.5, 1); }
-    .nav-about div.leaders.closed {
+    .nav-about div.leaders.closed, .nav-about div.locations.closed {
       max-height: 0px; }
-    .nav-about div.leaders .divider {
+    .nav-about div.leaders .divider, .nav-about div.locations .divider {
       margin-bottom: 38px;
       height: 0px;
       border-top: 1px solid black; }
-      .nav-about div.leaders .divider * {
+      .nav-about div.leaders .divider *, .nav-about div.locations .divider * {
         visibility: hidden; }
   .nav-about header.row {
     margin-bottom: 38px; }

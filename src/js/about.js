@@ -12,11 +12,24 @@ proef.controller('aboutCtrl', ['$scope','$timeout', function($scope, $timeout) {
 		sydel: 'closed'
 	};
 
+	$scope.locations = {
+		sanfrancisco: 'closed',
+		losangeles: 'closed',
+		newyork: 'closed',
+		saltlake: 'closed'
+	};
+
 	$scope.leadershipOpen = false;
+	$scope.locationsOpen = false;
 
 	$scope.toggleLeadership = function(){
 		$scope.leadershipOpen ? $scope.leadershipOpen = false : $scope.leadershipOpen = true;
 		$scope.articleToggle('leadership')
+	}
+
+	$scope.toggleLocation = function(){
+		$scope.locationsOpen ? $scope.locationsOpen = false : $scope.locationsOpen = true;
+		$scope.articleToggle('locations')
 	}
 
 	$scope.activeArticle = function(article){
@@ -44,6 +57,7 @@ proef.controller('aboutCtrl', ['$scope','$timeout', function($scope, $timeout) {
 			$timeout(setToClose, 1000);
 		}
 	};
+
 	$scope.leaderToggle = function(leader){
 		var setToOpen = function(){
 			$scope.leaders[leader] = 'open';
@@ -61,6 +75,25 @@ proef.controller('aboutCtrl', ['$scope','$timeout', function($scope, $timeout) {
 			$timeout(setToClose, 1000);
 		}
 	};
+
+	$scope.locationToggle = function(location){
+		var setToOpen = function(){
+			$scope.locations[location] = 'open';
+		};
+
+		var setToClose = function(){
+			$scope.locations[location] = 'closed';
+		};
+
+		if($scope.locations[location] === 'closed'){
+			$scope.locations[location] = 'transition';
+			$timeout(setToOpen, 1000);
+		} else{
+			$scope.locations[location] = 'transition';
+			$timeout(setToClose, 1000);
+		}
+	};
+
 	$scope.activeLeader = function(leader){
 		if($scope.leaders[leader] === 'open' || $scope.leaders[leader] === 'transition'){
 			return true;
@@ -68,4 +101,13 @@ proef.controller('aboutCtrl', ['$scope','$timeout', function($scope, $timeout) {
 			return false;
 		}
 	};
+
+	$scope.activeLocation = function(location){
+		if($scope.locations[location] === 'open' || $scope.locations[location] === 'transition'){
+			return true;
+		} else if ($scope.locations[location]=== 'closed'){
+			return false;
+		}
+	};
+
 }]);
