@@ -1,28 +1,58 @@
 <div class="nav-contact row">
-<article>
-	<header>
-			<h1>Contact</h1>
+<div class="large-12 columns">
+	<header class="row" slide-toggle="#contact" ng-click="sectionToggle('contact')">
+		<div class="large-1 large-offset-1 columns text-center">
+			<div class="article-nmbr" ng-class="{ 'active': activeSection('contact') }">1</div>
+		</div>
+		<div class="large-8 columns left title-container">
+			<div class="title">Contact</div>
+		</div>
+		<div class="large-1 columns left">
+			<div class="icon-up" ng-show="activeSection('contact')">
+				<img src="img/arrow-up.png"></img>
+			</div>
+		</div>
 	</header>
-	<section>
-		<p>
-			info@getproef.com
-			+415 401 7077
-		</p>
-		<p>
-			We believe in beauty, and we are always original.
-		</p>
-	</section>
-</article>
-<article>
-	<header>
-			<h1>Newsletter</h1>
+
+	<article class="row">
+		<div class="large-10 large-offset-1 columns article-box" ng-class="{ 'active': activeSection('contact') }">
+			<div id="contact" class="slideable large-5 large-offset-1 columns">
+				<section class="description">
+					<p>info@getproef.com</p>
+					<p>+415 401 7077</p>
+				</section>
+			</div>
+		</div>
+	</article>
+	<header class="row" slide-toggle="#newsletter" ng-click="sectionToggle('newsletter')">
+		<div class="large-1 large-offset-1 columns text-center">
+			<div class="article-nmbr" ng-class="{ 'active': activeSection('newsletter') }">2</div>
+		</div>
+		<div class="large-8 columns left title-container">
+			<div class="title">Newsletter</div>
+		</div>
+		<div class="large-1 columns left">
+			<div class="icon-up" ng-show="activeSection('newsletter')">
+				<img src="img/arrow-up.png"></img>
+			</div>
+		</div>
 	</header>
-	<section>
-		<p>
-			Proef newsletter signup
-		</p>
-		<input name="newsletter" type="text"></input>
-		<label for="newsletter"> ok</label>
-	</section>
-</article>
+
+	<article class="row">
+		<div class="large-10 large-offset-1 columns article-box" ng-class="{ 'active': activeSection('newsletter') }">
+			<div id="newsletter" class="slideable large-12 large-offset-1 columns">
+				<section class="description">
+					<p>Proef newsletter signup</p>
+				</section>
+				<div class="row">
+					<div class="large-7 columns">
+						<input type="text"></input>
+					</div>
+					<div id="signup" class="large-1 left columns">ok</div>
+				</div>
+			</div>
+		</div>
+	</article>
 </div>
+</div>
+

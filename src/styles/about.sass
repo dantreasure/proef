@@ -2,9 +2,32 @@
 	max-width: none
 	padding-top: 216px
 
+	// *
+	// 	border: 1px solid
+	div.leaders, div.locations
+		overflow: hidden
+		overflow-y: hidden;
+		max-height: 7000px; /* approximate max height */
+
+		transition-property: all;
+		transition-duration: .7s;
+		transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+		&.closed
+			max-height: 0px
+
+		.divider
+			margin-bottom: 38px
+			height: 0px
+			border-top:1px solid black
+			*
+				visibility: hidden
+
 	header.row
+		margin-bottom: 38px
+
 		&:nth-child(n+2)
-			margin-top: 92px
+			margin-top: 55px
 
 		.article-nmbr
 			height: 52px
@@ -18,67 +41,101 @@
 				border: 1px solid black
 				border-radius: 50%
 
-		.title-container
-			padding-left: 0px
+	.title-container
+		padding-left: 0px
 
-			.title
-				font-family: "Grotesk-light", arial, sans-serif
-				font-size: 123px
-				line-height: 60px
-				display: table-cell
+		.title
+			font-family: "Grotesk-light", arial, sans-serif
+			font-size: 123px
+			line-height: 60px
+			display: table-cell
 
-				&.leader
-					letter-spacing: -3px
+			&.leader
+				padding-top: 38px
+				letter-spacing: -3px
 
-		.icon-up
-			text-align: center
-			padding: 15px 0
+			&.location
+				padding-top: 38px
+		#mvdp
+			padding-top: 0px
+		#sanfran
+			padding-top: 0px
+
+	.icon-up
+		text-align: center !important
+		padding: 15px 0 !important
 
 	article.row
-		margin-top: 38px
+		margin:0 0 0px 0
+
+		&.active
+			margin-bottom: 38px
 
 		.icon-up
 			text-align: center
 			padding: 15px 0
-		.article-box
-			background-color: rgba(255,255,255,0.6)
 
-			&.active
-				border: 1px solid black
+	.article-box
+		background-color: rgba(255,255,255,0.6)
 
-		.description
+		&.leader
+			margin-top: 38px
 
-			p
-				font-family: "Grotesk-light", arial, sans-serif
-				font-size: 35px
-				line-height: 40px
+		&.active
+			border: 1px solid black
+			padding-bottom: 52px
 
-				&:first-child
-					margin-top: 52px
-				&:last-child
-					margin-bottom: 52px
+	#news
+		height: 371px
 
-			.box
-				border: 1px solid black
-				height: 100%
-				width: 100%
+	.description
 
-				.content
-					padding: 25px 25px 25px 58px
+		p
+			font-family: "Grotesk-light", arial, sans-serif
+			font-size: 35px
+			line-height: 40px
 
-					p
-						font-size: 18px
-						line-height: 20px
+			&:first-child
+				margin-top: 52px
+			&:last-child
+				margin-bottom: 52px
 
-					.close-icon
-						float: right
-						margin-top: -8px
-						margin-right: -6px
+		&.news
+			.title
+				font-size: 50px
+			.press
+				p
+					line-height: 50px
+					display: inline
+					text-decoration: underline
+					transition: margin-right 0.25s ease
 
-					.indication
-						float: left
-						margin-left: -38px
-						margin-top: -6px
+					&:hover
+						margin-right: 10px
+				img
+					padding-bottom: 10px
+
+		.box
+			border: 1px solid black
+			height: 100%
+			width: 100%
+
+			.content
+				padding: 25px 25px 25px 58px
+
+				p
+					font-size: 18px
+					line-height: 20px
+
+				.close-icon
+					float: right
+					margin-top: -8px
+					margin-right: -6px
+
+				.indication
+					float: left
+					margin-left: -38px
+					margin-top: -6px
 
 
 
