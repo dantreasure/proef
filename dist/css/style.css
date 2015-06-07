@@ -110,8 +110,6 @@
 .nav-approach {
   max-width: none;
   padding-top: 216px; }
-  .nav-approach * {
-    border: 1px solid black; }
   .nav-approach header.row:nth-child(n+2) {
     margin-top: 92px; }
   .nav-approach header.row .article-nmbr {
@@ -214,7 +212,62 @@
             margin-top: -6px; }
 
 .nav-contact {
-  padding-left: 79px; }
+  max-width: none;
+  padding-top: 216px; }
+  .nav-contact input {
+    border-width: 0px;
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: 1px solid black;
+    font-size: 52px;
+    height: 69px; }
+  .nav-contact #signup {
+    font-size: 50px; }
+  .nav-contact header.row:nth-child(n+2) {
+    margin-top: 92px; }
+  .nav-contact header.row .article-nmbr {
+    height: 52px;
+    width: 52px;
+    text-align: center;
+    line-height: 52px;
+    margin: 0 auto;
+    margin-top: 12.5px; }
+    .nav-contact header.row .article-nmbr.active {
+      border: 1px solid black;
+      border-radius: 50%; }
+  .nav-contact header.row .title-container {
+    padding-left: 0px; }
+    .nav-contact header.row .title-container .title {
+      font-family: "Grotesk-light", arial, sans-serif;
+      font-size: 123px;
+      line-height: 60px;
+      display: table-cell; }
+  .nav-contact header.row .icon-up {
+    text-align: center;
+    padding: 15px 0; }
+  .nav-contact article.row {
+    margin-top: 38px; }
+    .nav-contact article.row .article-box {
+      background-color: rgba(255, 255, 255, 0.6); }
+      .nav-contact article.row .article-box.active {
+        border: 1px solid black; }
+    .nav-contact article.row .description p {
+      font-family: "Grotesk-light", arial, sans-serif;
+      font-size: 35px;
+      line-height: 40px; }
+      .nav-contact article.row .description p:first-child {
+        margin-top: 52px; }
+      .nav-contact article.row .description p:last-child {
+        margin-bottom: 52px; }
+      .nav-contact article.row .description p .footnote {
+        -webkit-transition: .25s;
+                transition: .25s; }
+        .nav-contact article.row .description p .footnote:hover {
+          text-shadow: 3px 2px 3px #b3b3b3;
+          color: #ffffff; }
+        .nav-contact article.row .description p .footnote.active {
+          text-shadow: 3px 2px 3px #b3b3b3;
+          color: #ffffff; }
 
 @font-face {
   font-family: "Everson-mono";
@@ -275,6 +328,8 @@ body {
   font-family: "Everson-mono", arial, sans-serif;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d; }
+  body .article-box.active {
+    padding-bottom: 52px !important; }
   body p {
     margin-bottom: 0;
     line-height: 1; }
