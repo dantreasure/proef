@@ -42,7 +42,14 @@
       line-height: 60px;
       display: table-cell; }
       .nav-about .title-container .title.leader {
+        padding-top: 38px;
         letter-spacing: -3px; }
+      .nav-about .title-container .title.location {
+        padding-top: 38px; }
+    .nav-about .title-container #mvdp {
+      padding-top: 0px; }
+    .nav-about .title-container #sanfran {
+      padding-top: 0px; }
   .nav-about .icon-up {
     text-align: center !important;
     padding: 15px 0 !important; }
@@ -58,7 +65,10 @@
     .nav-about .article-box.leader {
       margin-top: 38px; }
     .nav-about .article-box.active {
-      border: 1px solid black; }
+      border: 1px solid black;
+      padding-bottom: 52px; }
+  .nav-about #news {
+    height: 371px; }
   .nav-about .description p {
     font-family: "Grotesk-light", arial, sans-serif;
     font-size: 35px;
@@ -67,6 +77,18 @@
       margin-top: 52px; }
     .nav-about .description p:last-child {
       margin-bottom: 52px; }
+  .nav-about .description.news .title {
+    font-size: 50px; }
+  .nav-about .description.news .press p {
+    line-height: 50px;
+    display: inline;
+    text-decoration: underline;
+    -webkit-transition: margin-right 0.25s ease;
+            transition: margin-right 0.25s ease; }
+    .nav-about .description.news .press p:hover {
+      margin-right: 10px; }
+  .nav-about .description.news .press img {
+    padding-bottom: 10px; }
   .nav-about .description .box {
     border: 1px solid black;
     height: 100%;

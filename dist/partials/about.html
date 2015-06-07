@@ -50,7 +50,7 @@
 			</div>
 			<div class="leader-row" slide-toggle="#marieke" ng-click="leaderToggle('marieke')">
 				<div class="large-8 large-offset-2 columns left title-container">
-					<div class="title leader">Marieke van der Poel</div>
+					<div id="mvdp" class="title leader">Marieke van der Poel</div>
 				</div>
 				<div class="large-1 columns left">
 					<div class="icon-up" ng-show="activeLeader('marieke')">
@@ -166,7 +166,7 @@
 
 			<div slide-toggle="#sanfrancisco" ng-click="locationToggle('sanfrancisco')">
 				<div class="large-8 large-offset-2 columns left title-container">
-					<div class="title leader">San Francisco</div>
+					<div id="sanfran" class="title location">San Francisco</div>
 				</div>
 				<div class="large-1 columns left">
 					<div class="icon-up" ng-show="activeLocation('sanfrancisco')">
@@ -176,15 +176,21 @@
 			</div>
 			<article>
 				<div class="large-10 large-offset-1 columns article-box leader" ng-class="{ 'active': activeLocation('sanfrancisco') }">
-					<div id="sanfrancisco" class="slideable large-9 large-offset-1 left columns">
-						<iframe width="1400" height="465" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=1179%20Church%20Street%2C%20San%20Francisco%2C%20CA%2C%20United%20States&key=AIzaSyAGpoEH2Bb_ijqHuwVQ-6M9nbZHVW7EHPo&zoom=11"></iframe>
+					<div id="sanfrancisco" class="slideable large-11 large-offset-1 right columns">
+						<section class="description large-6 columns left">
+							<p>1179 Church Street</p>
+							<p>San Francisco, CA</p>
+							<p>hellosf@getproef.com</p>
+							<p>+415 401 7077</p>
+						</section>
+						<iframe width="600" height="470" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=1179%20Church%20Street%2C%20San%20Francisco%2C%20CA%2C%20United%20States&key=AIzaSyAGpoEH2Bb_ijqHuwVQ-6M9nbZHVW7EHPo&zoom=11"></iframe>
 					</div>
 				</div>
 			</article>
 
 			<div slide-toggle="#losangeles" ng-click="locationToggle('losangeles')">
 				<div class="large-8 large-offset-2 columns left title-container">
-					<div class="title leader">Los Angeles</div>
+					<div class="title location">Los Angeles</div>
 				</div>
 				<div class="large-1 columns left">
 					<div class="icon-up" ng-show="activeLocation('losangeles')">
@@ -194,15 +200,21 @@
 			</div>
 			<article>
 				<div class="large-10 large-offset-1 columns article-box leader" ng-class="{ 'active': activeLocation('losangeles') }">
-					<div id="losangeles" class="slideable large-9 large-offset-1 left columns">
-						<iframe width="1400" height="465" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=1179%20Church%20Street%2C%20San%20Francisco%2C%20CA%2C%20United%20States&key=AIzaSyAGpoEH2Bb_ijqHuwVQ-6M9nbZHVW7EHPo&zoom=11"></iframe>
+					<div id="losangeles" class="slideable large-11 large-offset-1 right columns">
+						<section class="description large-6 columns left">
+							<p>6260 West 3rd St.</p>
+							<p>Hollywood, CA</p>
+							<p>hellola@getproef.com</p>
+							<p>+808 778 3611</p>
+						</section>
+						<iframe width="600" height="470" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=6260%20West%203rd%20Street%2C%20West%20Hollywood%2C%20CA%2C%20United%20States&key=AIzaSyAGpoEH2Bb_ijqHuwVQ-6M9nbZHVW7EHPo&zoom=11"></iframe>
 					</div>
 				</div>
 			</article>
 
 			<div slide-toggle="#newyork" ng-click="locationToggle('newyork')">
 				<div class="large-8 large-offset-2 columns left title-container">
-					<div class="title leader">New York</div>
+					<div class="title location">New York</div>
 				</div>
 				<div class="large-1 columns left">
 					<div class="icon-up" ng-show="activeLocation('newyork')">
@@ -212,15 +224,21 @@
 			</div>
 			<article>
 				<div class="large-10 large-offset-1 columns article-box leader" ng-class="{ 'active': activeLocation('newyork') }">
-					<div id="newyork" class="slideable large-9 large-offset-1 left columns">
-						<iframe width="1400" height="465" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=1179%20Church%20Street%2C%20San%20Francisco%2C%20CA%2C%20United%20States&key=AIzaSyAGpoEH2Bb_ijqHuwVQ-6M9nbZHVW7EHPo&zoom=11"></iframe>
+					<div id="newyork" class="slideable large-11 large-offset-1 right columns">
+						<section class="description large-6 columns left">
+							<p>158 Mott Street No 9</p>
+							<p>New York, NY</p>
+							<p>hellonyc@getproef.com</p>
+							<p>+310 283 0411</p>
+						</section>
+						<iframe width="600" height="470" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=158%20Mott%20Street%2C%20New%20York%20City%2C%20NY%2C%20United%20States&key=AIzaSyAGpoEH2Bb_ijqHuwVQ-6M9nbZHVW7EHPo&zoom=11"></iframe>
 					</div>
 				</div>
 			</article>
 
 			<div slide-toggle="#saltlake" ng-click="locationToggle('saltlake')">
 				<div class="large-8 large-offset-2 columns left title-container">
-					<div class="title leader">Salt Lake City</div>
+					<div class="title location">Salt Lake City</div>
 				</div>
 				<div class="large-1 columns left">
 					<div class="icon-up" ng-show="activeLocation('saltlake')">
@@ -230,14 +248,18 @@
 			</div>
 			<article>
 				<div class="large-10 large-offset-1 columns article-box leader" ng-class="{ 'active': activeLocation('saltlake') }">
-					<div id="saltlake" class="slideable large-6 large-offset-1 right columns">
-						<iframe width="600" height="470" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=1179%20Church%20Street%2C%20San%20Francisco%2C%20CA%2C%20United%20States&key=AIzaSyAGpoEH2Bb_ijqHuwVQ-6M9nbZHVW7EHPo&zoom=11"></iframe>
+					<div id="saltlake" class="slideable large-11 large-offset-1 right columns">
+						<section class="description large-6 columns left">
+							<p>159 W Pierpont Ave</p>
+							<p>Salt Lake City, UT</p>
+							<p>helloslc@getproef.com</p>
+							<p>+801 012	3456</p>
+						</section>
+						<iframe width="600" height="470" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=159%20W%20Pierpont%20Ave%2C%20Salt%20Lake%20City%2C%20UT%2C%20United%20States&key=AIzaSyAGpoEH2Bb_ijqHuwVQ-6M9nbZHVW7EHPo&zoom=11"></iframe>
 					</div>
 				</div>
 			</article>
 		</div>
-
-
 
 		<header class="row" slide-toggle="#news" ng-click="articleToggle('news')">
 			<div class="large-1 large-offset-1 columns text-center">
@@ -253,17 +275,32 @@
 			</div>
 		</header>
 
-		<article class="row" ng-class="{ 'active': activeArticle('whoWeAre') }">
+		<article class="row" ng-class="{ 'active': activeArticle('news') }">
 			<div class="large-10 large-offset-1 columns article-box" ng-class="{ 'active': activeArticle('news') }">
 				<div id="news" class="slideable large-5 large-offset-1 columns">
-					<section class="description">
-						<p>
-						We offer tailored insight to create, support and develop your vision:
-						</p>
+					<section class="description news">
+						<p class="title">Selected press:</p>
 						<br>
-						<p>
-							gif (will be provided)
-						</p>
+						<div class="press">
+							<p>General Assembly</p>
+							<img src="img/arrow-small-r.png" alt="footnote open">
+						</div>
+						<div class="press">
+							<p>Dutch Design Week</p>
+							<img src="img/arrow-small-r.png" alt="footnote open">
+						</div>
+						<div class="press">
+							<p>Dwell / PSFK</p>
+							<img src="img/arrow-small-r.png" alt="footnote open">
+						</div>
+						<div class="press">
+							<p>Skype</p>
+							<img src="img/arrow-small-r.png" alt="footnote open">
+						</div>
+						<div class="press">
+							<p>San Francisco Design Week</p>
+							<img src="img/arrow-small-r.png" alt="footnote open">
+						</div>
 					</section>
 				</div>
 			</div>
